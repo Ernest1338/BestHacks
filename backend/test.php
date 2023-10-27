@@ -1,3 +1,3 @@
 <?php
 header("Content-Type: application/json");
-echo "{'witam': 'żegnam'}";
+echo json_encode(array("name" => "Grzegorz Brown"));

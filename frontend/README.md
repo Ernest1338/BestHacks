@@ -1,38 +1,24 @@
-# create-svelte
+# Informacje o kontrybucji
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Budowanie
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+npm install # instalacja modułów
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+npm run dev -- --open # żeby otworzyć od razu nową kartę
 ```
 
-## Building
+## Wskazówki
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- w **/lib/index.ts** trzymamy utile
+- w **/lib/objects.ts** trzymamy szablony obiektów otrzymywanych z bazy danych
+- **/src/app.scss** służy do globalnych stylów + importów (np. czcionek) a **/src/variables.scss** do przychowywania np. kolorów w zmiennych globalnych
+- **/lib/assets/** to folder z assetami na stronę, można pobierać linki za pomocą utila **assets** w index.ts
+    więc jak chcesz np. zdjęcie wyświetlić to tak
+    ```
+    <img src="{assets.getAssetUrl('test.png')}" alt="test">
+    ```
+- grupy w svelcie (np. (main), (forms) ) dzielą logicznie z jakiego +layout.svelte korzystają pliki
+- ip do backendu można skonfigurować w **/lib/index.ts**, zmienna backendIP
+- w każdym **+layout.svelte** opakowujemy cały html w <div class="app"></div>, żeby można było stylować content
+- proszę Cię Grzesiek pisz w css klasy (.klasa) zamiast id (#id) xd
