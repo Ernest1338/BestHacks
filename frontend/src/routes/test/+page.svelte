@@ -12,7 +12,7 @@
 			password: "",
 			phone: ""
 		});
-		console.log(JSON.parse(result));
+		console.log(result);
 	});
 </script>
 
