@@ -10,7 +10,7 @@
 	}
     
     function sendLoginData() {
-        backend.post("/userlogin", loginData )
+        backend.post("/userlogin", loginData);
     }
 
 
