@@ -1,29 +1,34 @@
 <script>
 
-    // export let id;
-    export let name;
+    export let id;
     export let employer;
     export let employer_logo;
+    export let job_title;
     export let description;
     export let salary_min;
     export let salary_max;
+    export let excluded_disabilities;
     export let type_of_employment;
-    export let localisation;
+    export let location;
     // export let categories;
     // export let file;
-
+    let src = "http://156.17.72.125:3001/get_logo?filename=" + employer_logo
 </script>
 
 <article>
 
-        <img src="{employer_logo}" alt="{employer}" id="employer_logo">
+        <img src="{src}" alt="{employer}" id="employer_logo">
 
         <section id="job_info">
-            <h3 id="job_name">{name}</h3>
+            <h3 id="job_name">{job_title}</h3>
 
             <h4 id="employer_and_salary">
                     <strong>{employer}</strong>
-                    <strong id="contract_and_salary"><span>Typ umowy: {type_of_employment}</span> <span> Pensja: {salary_min} - {salary_max} brutto</span></strong>
+                <strong id="contract_and_salary">
+                    <span>Typ umowy: {type_of_employment}</span>
+                    <span> Pensja: {salary_min} - {salary_max} brutto</span>
+                    <span>{location}</span>
+                </strong>
             </h4>
                 
             <p id="description" style="font-size: 20px; padding:5px">
