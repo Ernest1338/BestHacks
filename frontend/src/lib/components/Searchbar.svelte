@@ -1,15 +1,10 @@
 <script>
 
-export let width;
+export let width = 60;
 </script>
 
-{#if width !== undefined}
-<input type="text" name="search" id="searchbar" placeholder="wyszukaj firmę, stanowisko itp..." width="{width}">
+<input type="text" name="search" id="searchbar" placeholder="wyszukaj firmę, stanowisko itp..." style = "width:{width}%;">
 
-{:else}
-<input type="text" name="search" id="searchbar" placeholder="wyszukaj firmę, stanowisko itp..." style = "width:60%;">
-
-{/if}
 
 <style>
     input {
