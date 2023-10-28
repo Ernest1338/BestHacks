@@ -3,8 +3,6 @@
 export let width = 60;
 </script>
 
-<h1>Wyszukaj pracy</h1>
-
 <form style = "width:{width}%;">
     <input type="text" name="search" class="searchbar input_field" placeholder="wyszukaj firmę, stanowisko itp...">
 
@@ -21,11 +19,6 @@ export let width = 60;
 
 
 <style lang="scss">
-    h1 {
-        font-size: 48px;
-        color: $secondary;
-    }
-
     form {
         display: flex;
         flex-direction: column;

@@ -3,7 +3,8 @@
 </script>
 
 <main>
-	<Searchbar width=60 />
+	<h1>Wyszukaj pracy</h1>
+	<Searchbar />
 </main>
 
 <style lang="scss">
@@ -14,5 +15,11 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		background: $primary;
+
+		h1 {
+			font-size: 48px;
+			color: white;
+		}
 	}
 </style>

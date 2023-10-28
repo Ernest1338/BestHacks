@@ -13,7 +13,6 @@
     }
 
     function handleNavbarHide(event) {
-        console.log(event.target);
         showMenu = false;
     }
 
