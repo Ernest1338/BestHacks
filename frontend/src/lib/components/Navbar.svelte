@@ -2,6 +2,7 @@
     import SideMenu from "./SideMenu.svelte";
     import { goto } from "$app/navigation";
     import { onMount } from 'svelte';
+	import { assets } from "$lib";
   
     // let username = browser && cookies.get("loggedAs") != undefined ? cookies.get("loggedAs") : "Niezalogowany"
     let showMenu = false;
@@ -24,8 +25,8 @@
 
 <nav>
     <div class="logo-container" on:click={() => goto("/")}>
-        <img src="/src/lib/images/logo.svg" alt="logo" srcset="" class="logo">
-        <span>Scholar Hub</span>
+        <img src="{assets.getAssetUrl("logo.svg")}" alt="logo" srcset="" class="logo">
+        <span>JobForEveryone</span>
     </div>
 
     <div class="menu-button" on:click={switchMenu}>

@@ -1,7 +1,5 @@
 #!/bin/python
 
-#!/bin/python
-
 import os
 import requests
 import json
@@ -31,4 +29,4 @@ def ok(res):
 
 
 if __name__ == "__main__":
-    print(post("/new_joboffer", {"asdf": 2}))
+    print(post("/new_joboffer", {"employer": "test", "description": "desc", "employer_logo": "logo", "job_title": "job title", "type_of_employment": "stationary", "location": "wroclaw", "excluded_disabilities": "Blind, ADHD", "salary_min": 1000, "salary_max": 2000}))
