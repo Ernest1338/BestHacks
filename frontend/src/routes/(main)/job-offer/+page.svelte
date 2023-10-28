@@ -22,8 +22,10 @@ import JobOfferHeader from "$lib/components/JobOfferHeader.svelte";
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
     div {
+        overflow: hidden;
         width: 50%;
     }
 
