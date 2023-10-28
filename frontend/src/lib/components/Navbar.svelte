@@ -63,9 +63,7 @@
         border: #232325 2px solid;
     }
     nav {
-        background: #232325;
-        position: absolute;
-        top: 0;
+        background: $secondary;
         width: 100%;
         display: flex;
         justify-content: space-between;

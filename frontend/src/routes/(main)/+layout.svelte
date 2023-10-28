@@ -3,7 +3,7 @@
     import Footer from "$lib/components/Footer.svelte";
 </script>
 
-<div class="app">
+<section class="app">
     <Navbar />
     
     <main>
@@ -11,7 +11,7 @@
     </main>
     
     <Footer />
-</div>
+</section>
 
 <style lang="scss">
     .app {
@@ -20,5 +20,14 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        main {
+		    position: relative;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 </style>

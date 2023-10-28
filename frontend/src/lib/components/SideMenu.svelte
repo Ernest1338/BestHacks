@@ -15,7 +15,7 @@
 <style lang="scss">
 
 .menu {
-    background-color: $primary;
+    background-color: $secondary;
     color: white;
     position: absolute;
     right: 0;
@@ -23,7 +23,7 @@
     height: 100vh;
     width: 300px;
     border-radius: 10px 0 0 10px;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.649);
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -14,6 +14,6 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        background: $primary;
+        background: $secondary;
     }
 </style>
