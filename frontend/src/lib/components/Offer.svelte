@@ -1,42 +1,47 @@
 <script>
 
     // export let id;
-    export let job_name;
+    export let name;
     export let employer;
-    export let short_desc;
+    export let employer_logo;
+    export let description;
+    export let salary_min;
+    export let salary_max;
     // export let categories;
     // export let file;
 
 </script>
 
 <article>
-    <!-- {id} -->
-    <h3>{job_name}</h3>
-    <!-- <address class="author">By <a rel="author" href="/author/john-doe">}</a></address>  -->
-    <p>
-        <span id="author">Authors:</span>
-        <span id="authors">
-        {#if employer != undefined  && employer.join(" ").lenght > 50}
-            {employer.join(" ").slice(0, 47)}...
-        {:else}
-            {employer}
-        {/if}
-        </span>
-    </p>
 
-    <p id="description">
-        {short_desc}
-    </p>
-    <!-- <p>
-        {categories}
-    </p> -->
-    <!-- {file} -->
+
+    <section id="job_offer">
+        <img src="{employer_logo}" alt="logo{employer}" id="employer_logo">
+        <section id="job_info">
+            <h3 id="job_name">{name}</h3>
+
+            <section id="employer_and_salary">
+                <h4 id="employer">{employer}
+                <h4 id="salary">
+                    <strong>Pensja: {salary_min} - {salary_max} brutto</strong>
+                </h4>
+                </h4>
+            </section>
+                
+            <section id="description" style="font-size: 20px; padding:5px">
+                {description}
+            </section>
+    
+        </section>
+    </section>
+
 </article>
 
 <style>
 
     article {
-        margin:0px 20px  20px 0;
+        display: grid;
+        /* margin:0px 20px  20px 0; */
         background-color: #303133;
         border-radius: 20px;
         -webkit-box-shadow: 0px 13px 7px 5px rgba(32, 32, 35, 1);
@@ -45,25 +50,47 @@
         transition: 0.1s;
         cursor: pointer;
         color: antiquewhite;
+        text-align: center;
     }
-    h3 {
-        margin-left: 20px;
-        font-size: 20px;
+    #job_name {
+        font-size: x-large;
+    }
+    section {
+        display: flex;
+    }
+
+    #employer_and_salary {
+        display: flex;
+        flex-direction: row;
+    }
+    #salary {
+        font-size: larger;
+    }
+    #employer {
+        font-size: larger;
+    }
+    #employer_logo {
+        margin: 10px;
+        width: 100px;
+        height: 100px;
+        border-radius: 30px;
+    }
+    #job_offer {
+        display: flex;
+        align-items: center;
+    }
+    #job_info {
+        font-size: larger;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     article:hover {
         background-color: #45474b;
     }
 
-    #author {
-        margin-left: 22px;
-        font-size: 16px;
-    }
-    #authors {
-        font-size: 12px;
-    }
     #description {
-        margin-left: 20px;
-        margin-top: 10px;
         font-size: 13px;
         color: #9c989f;
     }

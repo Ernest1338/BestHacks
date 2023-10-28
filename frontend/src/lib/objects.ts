@@ -33,6 +33,7 @@ export interface JobOfferData {
     readonly name: string;
     readonly employer: string;
     readonly description: string;
+    readonly employer_logo: string;
     readonly salary_min?: number;
     readonly salary_max?: number;
     
