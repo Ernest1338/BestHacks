@@ -1,7 +1,5 @@
-
-
 <section class="app">
-<slot></slot>
+    <slot></slot>
 </section>
 
 <style>
