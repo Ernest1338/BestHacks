@@ -1,13 +1,13 @@
 const backendIp: string = "127.0.0.1";
 
 export const backend = {
-    get: async <Type>(endpoint: string, params: Record<string, string> = {}): Promise<Type> => {
+    get: async <Type>(endpoint: string, params: object = {}): Promise<Type> => {
         const url = new URL(`http://${backendIp}:3000/${endpoint}.php`);
         url.search = new URLSearchParams(params).toString();
         const result = await fetch(url.toString());
         return await result.json();
     },
-    post: async <Type>(endpoint: string, params: Record<string, string> = {}): Promise<Type> => {
+    post: async <Type>(endpoint: string, params: object = {}): Promise<Type> => {
         const result = await fetch(`http://${backendIp}:3000/${endpoint}.php`, {
             method: "POST",
             headers: {
