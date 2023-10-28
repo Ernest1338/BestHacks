@@ -5,13 +5,9 @@
     box-sizing: border-box;
 }
 
-html {
-    width: 100vw;
-    min-height: 100vh;
-}
-
 body {
     font-family: 'DM Sans', sans-serif;
+    height: 100%;
     margin: 0;
     padding: 0;
 }

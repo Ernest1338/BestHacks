@@ -47,3 +47,14 @@ export const cookies = {
 export const assets = {
     getAssetUrl: (filepath: string) => `/src/lib/assets/${filepath}`
 }
+
+export const loginutil = {
+    login: (username: string, authkey: string) => {
+        cookies.set("authkey", authkey);
+        cookies.set("loggedAs", username);
+    },
+    logout: () => {
+        cookies.get("authkey");
+        cookies.get("loggedAs");
+    }
+}
