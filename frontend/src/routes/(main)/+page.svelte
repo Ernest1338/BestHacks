@@ -1,5 +1,5 @@
-<script>
-	import Test from "$lib/components/Test.svelte";
+<script lang="ts">
+	import Searchbar from "$lib/components/Searchbar.svelte";
 </script>
 
-<Test />
+<Searchbar width=60 />
