@@ -3,10 +3,10 @@
 export let width = 60;
 </script>
 
-<form action="" style = "width:{width}%;">
-    <input type="text" name="search" id="searchbar" placeholder="wyszukaj firmę, stanowisko itp..." class="input_field">
+<form style = "width:{width}%;">
+    <input type="text" name="search" class="searchbar input_field" placeholder="wyszukaj firmę, stanowisko itp...">
 
-    <section id="second_row">
+    <section class="second_row">
         <input type="text" name="location" class="input_field" id="location_field">
         <input type="number" min="0" max="600" name="distance" class="input_field" id="distance_field" >
         <select name="categories" id="categories">
@@ -18,32 +18,41 @@ export let width = 60;
 </form>
 
 
-<style>
+<style lang="scss">
     form {
-        font-size: 20px;
-    }
-    select {
-        padding: 10px;
-        font-size: 20px;
-        border-radius: 5px;
-        
-    }
-    #searchbar {
-        width: 100%;
-    }
-    .input_field {
-        font-size: larger;
-        text-align: center;
-    }
-    #second_row {
-        width: 100%;
         display: flex;
-    }
-    input[type=number] {
-        width: 20%;
-    }
-    input:focus {
-        border: solid 4px black;
+        flex-direction: column;
+        row-gap: 5px;
+        font-size: 20px;
+
+        .searchbar {
+            width: 100%;
+        }
+
+        .input_field {
+            font-size: larger;
+            text-align: center;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        
+        .second_row {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            input[type=number] {
+                width: 20%;
+            }
+
+            input:focus {
+                border: solid 4px black;
+            }
+        }
     }
 
 

@@ -29,6 +29,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 1;
 
     .menu-element {
         color: #d8dcd6;
