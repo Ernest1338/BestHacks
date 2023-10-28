@@ -50,6 +50,7 @@ main {
         justify-content: center;
         grid-area: search;
         width: 100%;
+        margin: 40px 0 20px 0;
     }
     #offers {
         grid-area: offer;
