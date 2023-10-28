@@ -12,7 +12,7 @@
 </script>
 
 
-<nav class="menu"   in:fly={{ x: 50, delay: 0, duration: 300 }} out:fly={{ x: -50, duration: 300 }}>
+<nav class="menu"   in:fly={{ x: 500, delay: 0, duration: 300 }} out:fly={{ x: 500, duration: 300 }}>
     <a class="menu-element" href="/user-profile">Profil</a>
     <a class="menu-element" href="/login">Zaloguj się</a>
     <a class="menu-element" href="/register">Zarejestruj się</a>
@@ -22,17 +22,19 @@
 <style lang="scss">
 
 .menu {
+    background-color: $primary;
+    color: white;
     position: absolute;
+    right: 0;
+    top: 0;
     height: 100vh;
-    width: 50vw;
+    width: 500px;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    row-gap: 2px;
-    padding: 20px 30px;
 
     .menu-element {
         color: #d8dcd6;

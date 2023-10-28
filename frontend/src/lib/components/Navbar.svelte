@@ -5,7 +5,7 @@
 	import { browser } from "$app/environment";
     import { onMount } from 'svelte';
   
-    let username = browser && cookies.get("loggedAs") != undefined ? cookies.get("loggedAs") : "Niezalogowany"
+    // let username = browser && cookies.get("loggedAs") != undefined ? cookies.get("loggedAs") : "Niezalogowany"
     let showMenu = false;
 
 
