@@ -5,8 +5,4 @@
 	import Searchbar from "$lib/components/Searchbar.svelte";
 </script>
 
-<Navbar />
-<Searchbar width=60/>
-<Offer />
-
-<Footer />
+<Searchbar />
