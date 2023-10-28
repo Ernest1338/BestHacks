@@ -3,13 +3,13 @@ const martinBackend: string = "156.17.72.12:3000";
 
 export const backend = {
     get: async <Type>(endpoint: string, backend: string, params: object = {}): Promise<Type> => {
-        const url = new URL(`http://${backend == "dawid" ? dawidBackend : martinBackend}/${endpoint}.php`);
+        const url = new URL(`http://${backend == "dawid" ? dawidBackend : martinBackend}/${endpoint}${backend != "dawid" ? ".php" : ""}`);
         url.search = new URLSearchParams(params).toString();
         const result = await fetch(url.toString());
         return await result.json();
     },
     post: async <Type>(endpoint: string, backend: string, params: object = {}): Promise<Type> => {
-        const result = await fetch(`http://${backend == "dawid" ? dawidBackend : martinBackend}/${endpoint}.php`, {
+        const result = await fetch(`http://${backend == "dawid" ? dawidBackend : martinBackend}/${endpoint}${backend != "dawid" ? ".php" : ""}`, {
             method: "POST",
             headers: {
                 Accept: 'application/json',

@@ -1,5 +1,12 @@
 <script lang="ts">
+	import { backend } from "$lib";
 	import Searchbar from "$lib/components/Searchbar.svelte";
+	import { onMount } from "svelte";
+
+	onMount(async () => {
+		const xd = await backend.get("joboffers", "dawid");
+		console.log(xd);
+	});
 </script>
 
 <main>
