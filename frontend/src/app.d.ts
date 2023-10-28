@@ -1,10 +1,6 @@
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 
-declare module '@fortawesome/pro-solid-svg-icons/index.es' {
-	export * from '@fortawesome/pro-solid-svg-icons';
-  }
-
 declare global {
 	namespace App {
 		// interface Error {}
@@ -15,3 +11,7 @@ declare global {
 }
 
 export {};
+
+declare module '@fortawesome/pro-solid-svg-icons/index.es' {
+	export * from '@fortawesome/pro-solid-svg-icons';
+}
