@@ -72,6 +72,7 @@
     #searchbar {
         width: 600px;
         position: relative;
+        height: fit-content;
 
         input {
             width: 100%;
