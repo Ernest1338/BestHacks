@@ -18,10 +18,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 8832b9179a0de9f215509b69c913b59f0d149ddc
     }
 </style>

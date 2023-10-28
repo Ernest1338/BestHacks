@@ -7,6 +7,7 @@
     export let description;
     export let salary_min;
     export let salary_max;
+    export let type_of_employment;
     // export let categories;
     // export let file;
 
@@ -14,26 +15,21 @@
 
 <article>
 
+        <img src="{employer_logo}" alt="{employer}" id="employer_logo">
 
-    <section id="job_offer">
-        <img src="{employer_logo}" alt="logo{employer}" id="employer_logo">
         <section id="job_info">
             <h3 id="job_name">{name}</h3>
 
-            <section id="employer_and_salary">
-                <h4 id="employer">{employer}
-                <h4 id="salary">
-                    <strong>Pensja: {salary_min} - {salary_max} brutto</strong>
-                </h4>
-                </h4>
-            </section>
+            <h4 id="employer_and_salary">
+                    <strong>{employer}</strong>
+                    <strong id="contract_and_salary"><span>Typ umowy: {type_of_employment}</span> <span> Pensja: {salary_min} - {salary_max} brutto</span></strong>
+            </h4>
                 
-            <section id="description" style="font-size: 20px; padding:5px">
+            <p id="description" style="font-size: 20px; padding:5px">
                 {description}
-            </section>
+            </p>
     
         </section>
-    </section>
 
 </article>
 
@@ -41,7 +37,10 @@
 
     article {
         display: grid;
-        /* margin:0px 20px  20px 0; */
+        border: 3px solid white;
+        grid-template-columns: .2fr .8fr;
+        align-items: center;
+        justify-content: center;
         background-color: #303133;
         border-radius: 20px;
         -webkit-box-shadow: 0px 13px 7px 5px rgba(32, 32, 35, 1);
@@ -55,43 +54,42 @@
     #job_name {
         font-size: x-large;
     }
-    section {
-        display: flex;
-    }
 
+    h3, h4 {
+        margin: 20px;
+    }
+    h4{
+        font-size: xx-large;
+    }
     #employer_and_salary {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
-    #salary {
-        font-size: larger;
+    #contract_and_salary {
+        display: flex;
+        justify-content: space-between;
     }
     #employer {
         font-size: larger;
     }
     #employer_logo {
-        margin: 10px;
-        width: 100px;
-        height: 100px;
-        border-radius: 30px;
-    }
-    #job_offer {
-        display: flex;
-        align-items: center;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        align-self: center;
     }
     #job_info {
         font-size: larger;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        
     }
     article:hover {
         background-color: #45474b;
     }
 
     #description {
-        font-size: 13px;
+        font-size: larger;
         color: #9c989f;
     }
 </style>
