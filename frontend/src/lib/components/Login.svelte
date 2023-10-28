@@ -17,18 +17,17 @@
 </script>
 
 <form>
-    <label for="email">Adres mailowy</label>
-    <input type="email" name="email" bind:value={loginData.email}>
-    <label for="password">Hasło</label>
-    <input type="password" name="password" bind:value={loginData.password}>
+    <section>
+        <label for="email">Adres mailowy</label>
+        <input type="email" name="email" bind:value={loginData.email}>
+    </section>
+    <section>
+        <label for="password">Hasło</label>
+        <input type="password" name="password" bind:value={loginData.password}>
+    </section>
     <button type="submit" on:click={sendLoginData}>Zaloguj się</button>
 </form>
 
 <style>
-
-form {
-    width: 600px;
-    height: 800px;
-}
 
 </style>
