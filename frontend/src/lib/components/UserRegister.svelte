@@ -28,8 +28,10 @@
     <h1>Zarejestruj</h1>
     <label for="email">Email</label>
     <input type="email" name="email" id="email" placeholder="przykładowy-email@gmail.com" bind:value={email}>
-    <label for="login">Login</label>
-    <input type="text" name="login" id="login" placeholder="Nazwa Użytkownika" bind:value={username}>
+    <label for="name">name</label>
+    <input type="text" name="name" id="name" placeholder="Nazwa Użytkownika" bind:value={user}>
+    <label for="name">surname</label>
+    <input type="text" name="surname" id="surname" placeholder="Nazwa Użytkownika" bind:value={surname}>
     <label for="password">Hasło</label>
     <input type="password" name="password" id="password" placeholder="Hasło" bind:value={password}>
     <label for="confirmPassword">Powtórz Hasło</label>

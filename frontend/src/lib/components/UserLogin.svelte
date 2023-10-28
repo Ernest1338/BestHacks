@@ -2,28 +2,36 @@
     import { goto } from '$app/navigation';
 	import { backend, cookies } from '$lib';
 
-    let username = "";
+    let email = "";
     let password = "";
 
+    let isError = false;
+    let errorMessage = "";
+
     async function login() {
-        const loginData = await backend.post("login", {
-            username: username,
+        let result = await backend.post("userlogin", "martin", {
+            email: email,
             password: password
         });
-        if(loginData.status === "OK") {
-            cookies.set("authkey", loginData.authkey);
-            cookies.set("loggedAs", username);
-            goto("/");
-        } else if(loginData.status === "ERROR") {
-            console.error(loginData.message);
+        result = JSON.parse(result);
+        if(result.status == "ERROR") {
+            isError = true;
+            errorMessage = result.message;
         }
+        // if(loginData.status === "OK") {
+        //     cookies.set("authkey", loginData.authkey);
+        //     cookies.set("loggedAs", email);
+        //     goto("/");
+        // } else if(loginData.status === "ERROR") {
+        //     console.error(loginData.message);
+        // }
     }
 </script>
 
 <form>
     <h1>Logowanie</h1>
-    <label for="login">Login</label>
-    <input type="text" name="login" id="login" placeholder="Nazwa użytkownika" bind:value={username}>
+    <label for="email">Email / Tel</label>
+    <input type="text" name="email" id="email" placeholder="test.email@gmail.com" bind:value={email}>
     <label for="password">Hasło</label>
     <input type="password" name="password" id="password" placeholder="Hasło" bind:value={password}>
 
@@ -31,6 +39,10 @@
 
     <p class="signup">Nie masz konta?<button type="button" on:click={() => goto("/register")}>Zarejestruj się</button></p>
 </form>
+
+{#if isError}
+    <p class="error">Error: {errorMessage}</p>
+{/if}
 
 <style lang="scss">
     form {
@@ -92,5 +104,10 @@
             font-weight: bold;
             cursor: pointer;
         }
+    }
+
+    .error {
+        font-size: 24px;
+        color: white;
     }
 </style>

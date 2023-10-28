@@ -46,14 +46,23 @@
     <div class="right">
         <div class="top">
             <span class="job_title">{job_title}</span>
+            <span class="job_salary">{salary_min} - {salary_max} PLN</span>
         </div>
-        <div class="bottom"></div>
+        <div class="bottom">
+            <span class="job_type">Typ umowy: {type_of_employment}</span>
+            <span class="job_location">{location}</span>
+        </div>
     </div>
 </article>
 
 <style lang="scss">
     article {
+        color: white;
         display: flex;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 2px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+        padding: 5px;
+        border-radius: 6px;
+        background: #2a2a2a;
 
         .left {
             display: flex;
@@ -61,8 +70,46 @@
             align-items: center;
 
             img {
-                width: 100px;
+                width: 90px;
+                border-radius: 5px;
+                margin: 5px;
             }
         }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 0 15px;
+            width: 100%;
+
+            .top {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .bottom {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .job_title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .job_salary {
+            font-size: 18px;
+        }
+
+        .job_type {
+            font-size: 16px;
+        }
+
+        .job_location {
+            font-size: 16px;
+        }
+
     }
 </style>

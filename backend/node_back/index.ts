@@ -38,10 +38,10 @@ app.get('/ping', (req, res) => {
     res.json({ status: "pong" });
 });
 
-app.get('/joboffers', async (req, res) => {
-    var rows = await db_query("SELECT * FROM joboffers");
-    res.json(rows);
-});
+// app.get('/joboffers', async (req, res) => {
+//     var rows = await db_query("SELECT * FROM joboffers");
+//     res.json(rows);
+// });
 
 app.get('/get_logo', async (req, res) => {
     let filename = req.query.filename;
@@ -62,11 +62,34 @@ app.get('/get_logo', async (req, res) => {
 app.get('/search', async (req, res) => {
     let query = req.query.query;
 
-    if (query === undefined) {
-        return res.json({status: "ERROR", message: "query not provided"});
+    let sql = "SELECT * FROM `joboffers` WHERE ";
+
+    if (query !== undefined) {
+        sql = sql + "(`description` LIKE '%" + query + "%' OR `employer` LIKE '%" + query + "%')";
     }
 
-    var rows = await db_query("SELECT * FROM `joboffers` WHERE `description` LIKE '%" + query + "%' OR `employer` LIKE '%" + query + "%'");
+    let disability = req.query.disability;
+    if (disability !== undefined) {
+        sql = sql + "AND (`excluded_disabilities` NOT LIKE '%" + disability + "%')";
+    }
+
+    let location = req.query.location;
+    if (location !== undefined) {
+        sql = sql + "AND (`location` LIKE '%" + location + "%')";
+    }
+
+    let job_title = req.query.job_title;
+    if (job_title !== undefined) {
+        sql = sql + "AND (`job_title` LIKE '%" + job_title + "%')";
+    }
+
+    let category = req.query.category;
+    if (category !== undefined) {
+        sql = sql + "AND (`job_title` LIKE '%" + category + "%')";
+    }
+
+    console.log(query, disability, location, job_title, sql);
+    var rows = await db_query(sql);
 
     res.json(rows);
 });
@@ -93,7 +116,6 @@ app.post('/new_joboffer', async (req, res) => {
         salary_max === undefined) {
         return res.json({status: "ERROR", message: "you need to provide all fields"});
     }
-    console.log(employer, description, employer_logo, job_title, type_of_employment, location, excluded_disabilities, salary_min, salary_max);
     let rows = db_query("INSERT INTO joboffers (employer, description, employer_logo, job_title, type_of_employment, location, excluded_disabilities, salary_min, salary_max) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [employer, description, employer_logo, job_title, type_of_employment, location, excluded_disabilities, salary_min, salary_max]);
     return res.json({status: "OK"});
 });

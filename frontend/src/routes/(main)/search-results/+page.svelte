@@ -29,20 +29,19 @@
 </main>
 
 <style lang="scss">
-
-main {
-    background: $primary;
-    position: relative;
-    flex-grow: 1;
-    display: grid;
-    grid-template-areas: 
-            "search search search"
-            "filter offer offer"
-            "filter offer offer";
-    grid-template-columns: 0.3fr 0.7fr;
-    grid-auto-rows: max-content;
-    
+    main {
+        background: $primary;
+        position: relative;
+        flex-grow: 1;
+        display: grid;
+        grid-template-areas: 
+                "search search search"
+                "filter offer offer"
+                "filter offer offer";
+        grid-template-columns: 0.3fr 0.7fr;
+        grid-auto-rows: max-content;
     }
+
     #search {
         margin-top: 20px;
         display: flex;
@@ -51,10 +50,12 @@ main {
         width: 100%;
         margin: 40px 0 20px 0;
     }
+
     #offers {
         grid-area: offer;
         margin-right: 50px;
     }
+    
     article {
         margin-top: 40px;
         margin-bottom: 40px;
