@@ -28,3 +28,12 @@ export interface CompanyLoginData {
     readonly email: string;
     readonly password: string;
 }
+
+export interface JobOfferData {
+    readonly name: string;
+    readonly employer: string;
+    readonly description: string;
+    readonly salary_min?: number;
+    readonly salary_max?: number;
+    
+}
