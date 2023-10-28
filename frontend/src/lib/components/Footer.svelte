@@ -8,11 +8,12 @@
     <p>Made by Gwiezdna Flota 2023</p>
 </footer>
 
-<style>
+<style lang="scss">
     footer {
         background: #232425;
         display: flex;
         justify-content: space-between;
         width: 100%;
+        background: $primary;
     }
 </style>

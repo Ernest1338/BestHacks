@@ -30,7 +30,3 @@
     <input type="tel" name="tel" bind:value={registerData.tel}>
     <button type="submit" on:click={sendRegisterData}>Zarejestruj się</button>
 </form>
-
-<style>
-
-</style>
