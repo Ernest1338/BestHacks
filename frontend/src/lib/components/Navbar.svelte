@@ -1,4 +1,6 @@
 <script>
+    import Fa from 'svelte-fa'
+    import { faBars } from '@fortawesome/free-solid-svg-icons'
     import SideMenu from "./SideMenu.svelte";
     import { goto } from "$app/navigation";
     import { onMount } from 'svelte';
@@ -30,6 +32,7 @@
     </div>
 
     <div class="menu-button" on:click={switchMenu}>
+        <Fa icon={faBars} size="1.6x" color="#8f9a9c"/>
         {#if showMenu}
             <div class="profile-menu">
                 <SideMenu />
@@ -41,8 +44,10 @@
 <style lang="scss">
     .menu-button {
         width: 30px;
-        background: white;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .log_button, .register_button {
         color: rgb(225, 220, 209);

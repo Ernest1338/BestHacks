@@ -38,9 +38,14 @@
         font-weight: 600;
         transition: 0.2s ease-in-out;
         cursor: pointer;
+        width: 90%;
+        padding: 5px 0;
+        margin: 4px 5px;
+        border-radius: 4px;
 
         &:hover {
             color: #fff;
+            background: #ffffff0a;
         }
     }
 }
