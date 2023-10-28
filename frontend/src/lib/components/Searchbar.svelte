@@ -8,8 +8,8 @@ export let width = 60;
 
     <section id="second_row">
         <input type="text" name="location" class="input_field" id="location_field">
-        <input type="number" name="distance" class="input_field" id="distance_field">
-        <select name="cars" id="categories">
+        <input type="number" min="0" max="600" name="distance" class="input_field" id="distance_field" >
+        <select name="categories" id="categories">
             <option value="stacjonarna">stacjonarna</option>
             <option value="hybrydowa">Hybrydowa</option>
             <option value="zdalne">Zdalna</option>
@@ -38,6 +38,7 @@ export let width = 60;
         text-align: center;
     }
     #second_row {
+        width: 100%;
         display: flex;
     }
     input[type=number] {
