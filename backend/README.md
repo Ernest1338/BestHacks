@@ -18,8 +18,11 @@ CREATE TABLE users(
 CREATE TABLE joboffers(
     id INT NOT NULL PRIMARY KEY,
     employer varchar(255),
-    description varchar(1024),
+    description varchar(10240),
     employer_logo varchar(255),
+    job_category varchar(255),
+    stationary_or_remote varchar(255),
+    location varchar(255),
     salary_min INT,
     salary_max INT
 );
@@ -35,13 +38,13 @@ VALUES
     (4, 'Bob', 'Williams', 'bob@example.com', 'strong_password', NULL, NULL, 'cv', NULL),
     (5, 'Eva', 'Brown', 'eva@example.com', 'complex_password', '111-222-3333', 'Data Analyst', 'cv', NULL);
 
-INSERT INTO joboffers (id, employer, description, employer_logo, salary_min, salary_max)
+INSERT INTO joboffers (id, employer, description, employer_logo, job_category, stationary_or_remote, location, salary_min, salary_max)
 VALUES
-  (1, 'ABC Inc.', 'Software Engineer', 'abc_logo.png', 60000, 80000),
-  (2, 'XYZ Corporation', 'Data Analyst', 'xyz_logo.png', 50000, 70000),
-  (3, 'Tech Solutions Ltd', 'UX Designer', 'techsolutions_logo.png', 55000, 75000),
-  (4, 'Global Innovations', 'Marketing Manager', 'globalinnovations_logo.png', 70000, 90000),
-  (5, 'Acme Corporation', 'Sales Representative', 'acme_logo.png', 45000, 60000);
+  (1, 'Tech Innovations Inc.', 'Senior Software Engineer with expertise in AI and Machine Learning', 'techinnovations_logo.png', 'Information Technology', 'Remote', 'Global', 80000, 100000),
+  (2, 'Data Analytics Co.', 'Data Scientist with strong analytical skills', 'dataanalytics_logo.png', 'Data Science', 'Stationary', 'New York', 70000, 90000),
+  (3, 'Design Creations Ltd', 'Graphic Designer for creative branding projects', 'designcreations_logo.png', 'Design', 'Stationary', 'Los Angeles', 55000, 75000),
+  (4, 'Healthcare Solutions', 'Medical Research Scientist for vaccine development', 'healthcare_logo.png', 'Medical Research', 'Remote', 'Global', 90000, 120000),
+  (5, 'Financial Consulting Group', 'Financial Analyst for investment planning', 'financialconsulting_logo.png', 'Finance', 'Stationary', 'Chicago', 60000, 80000);
 ```
 
 drops
