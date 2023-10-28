@@ -1,4 +1,4 @@
-export interface UserRegister {
+export interface UserRegisterData {
     readonly name: string;
     readonly surname: string;
     readonly email: string;
@@ -6,12 +6,12 @@ export interface UserRegister {
     readonly tel: string;
 }
 
-export interface UserLogin {
+export interface UserLoginData {
     readonly email: string;
     readonly password: string;
 }
 
-export interface CompanyRegister {
+export interface CompanyRegisterData {
     readonly nip: string;
     readonly regon: string;
     readonly nipsc: string;
@@ -23,7 +23,7 @@ export interface CompanyRegister {
     readonly surname: string;
 }
 
-export interface CompanyLogin {
+export interface CompanyLoginData {
     readonly email: string;
     readonly password: string;
 }
