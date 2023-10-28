@@ -5,7 +5,7 @@
 
 <footer>
     <section id="icon-section"></section>
-    <p>Made by Gwiezdna Flota 2023</p>
+    <span>Made by Gwiezdna Flota 2023</span>
 </footer>
 
 <style lang="scss">
@@ -15,5 +15,8 @@
         justify-content: space-between;
         width: 100%;
         background: $secondary;
+        padding: 10px;
+        color: $text;
+        font-weight: 600;
     }
 </style>
