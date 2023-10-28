@@ -1,15 +1,16 @@
 <script lang="ts">
-	import { backend } from "$lib";
+	import { backend, searchResult } from "$lib";
 	import Offer from "$lib/components/Offer.svelte";
 	import Searchbar from "$lib/components/Searchbar.svelte";
 	import type { JobOfferData } from "$lib/objects";
 	import { onMount } from "svelte";
     
-    let offers = [];
-    onMount(async () => {
-        offers = await backend.get("joboffers", "dawid");
-        console.log(offers);
-    })
+    let offers = searchResult;
+    console.log(offers)
+    // onMount(async () => {
+    //     offers = await backend.get("joboffers", "dawid");
+    //     console.log(offers);
+    // })
 
 </script>
 

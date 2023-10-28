@@ -9,13 +9,20 @@
 
     let searchResult = [];
     async function sendQuery() {
+        // todo if query.length == 0 and filters(not done yet) is empty 
+        if (query.length == 0) {
+            return 
+        }
         searchResult = []
         searchResult = await backend.get("search", "dawid", { query: query });
+        if (searchResult.length == 0 ){
+            alert("Nie ma ofert spełniających podane kryteria")
+        }
         setSearchResult(searchResult)
         if (searchResult.length > 0) {
             goto("/search-results")
         }
-        console.log(searchResult)
+        console.log("searach" + searchResult)
     }
 </script>
 
