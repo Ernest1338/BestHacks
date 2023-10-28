@@ -1,5 +1,4 @@
 <script>
-	import { loginutil } from '$lib';
     import { fly } from 'svelte/transition';
 
     // loginutil.logout();
@@ -10,6 +9,8 @@
     <a class="menu-element" href="/user-profile">Profil</a>
     <a class="menu-element" href="/login">Zaloguj się</a>
     <a class="menu-element" href="/register">Zarejestruj się</a>
+    <a class="menu-element" href="/companylogin">Zaloguj się jako firma</a>
+    <a class="menu-element" href="/companyregister">Zarejestruj się jako firma</a>
 </nav>
 
 <style lang="scss">
