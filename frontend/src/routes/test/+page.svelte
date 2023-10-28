@@ -1,7 +1,5 @@
 <script>
 	import { backend } from "$lib";
-	import Filters from "$lib/components/Filters.svelte";
-	import Searchbar from "$lib/components/Searchbar.svelte";
 	import { onMount } from "svelte";
 
 	onMount(async () => {

@@ -16,12 +16,15 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background: $primary;
+		background: url("/src/lib/assets/background.png");
+		background-size: cover;
+		background-position: center;
 
 		h1 {
 			font-size: 48px;
 			margin-top: 0;
 			color: white;
+			text-shadow: 1px 2px 0 black;
 		}
 	}
 </style>
