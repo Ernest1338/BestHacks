@@ -13,8 +13,10 @@
 
 </script>
 
-<Searchbar />
 <main>
+<section id="search">
+    <Searchbar />
+</section>
 <section id="filters">
 
 </section>
@@ -35,10 +37,22 @@ main {
     position: relative;
     flex-grow: 1;
     display: grid;
+    grid-template-areas: 
+            "none search search"
+            "filter offer offer"
+            "filter offer offer";
     grid-template-columns: 0.3fr 0.7fr;
     }
+    #search {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        grid-area: search;
+        width: 100%;
+    }
     #offers {
-        margin-top: 100px;
+        grid-area: offer;
+        // margin-top: 100px;
         margin-right: 50px;
     }
     article {
