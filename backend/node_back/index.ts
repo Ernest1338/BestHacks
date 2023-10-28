@@ -71,6 +71,12 @@ app.get('/search', async (req, res) => {
     res.json(rows);
 });
 
+app.post('/new_joboffer', async (req, res) => {
+    let data = req.body;
+    console.log(data);
+    return res.json({status: "OK"});
+});
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log("Server Listening on port:", PORT);
