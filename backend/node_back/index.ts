@@ -73,7 +73,28 @@ app.get('/search', async (req, res) => {
 
 app.post('/new_joboffer', async (req, res) => {
     let data = req.body;
-    console.log(data);
+    let employer = data.employer;
+    let description = data.description;
+    let employer_logo = "logo1.png"; // TODO
+    let job_title = data.job_title;
+    let type_of_employment = data.type_of_employment;
+    let location = data.location;
+    let excluded_disabilities = data.excluded_disabilities;
+    let salary_min = data.salary_min;
+    let salary_max = data.salary_max;
+    if (employer === undefined ||
+        description === undefined ||
+        employer_logo === undefined ||
+        job_title === undefined ||
+        type_of_employment === undefined ||
+        location === undefined ||
+        excluded_disabilities === undefined ||
+        salary_min === undefined ||
+        salary_max === undefined) {
+        return res.json({status: "ERROR", message: "you need to provide all fields"});
+    }
+    console.log(employer, description, employer_logo, job_title, type_of_employment, location, excluded_disabilities, salary_min, salary_max);
+    let rows = db_query("INSERT INTO joboffers (employer, description, employer_logo, job_title, type_of_employment, location, excluded_disabilities, salary_min, salary_max) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [employer, description, employer_logo, job_title, type_of_employment, location, excluded_disabilities, salary_min, salary_max]);
     return res.json({status: "OK"});
 });
 
