@@ -38,14 +38,10 @@
 
 <style lang="scss">
     form {
-        display: flex;
+        // display: flex;
         flex-direction: column;
         row-gap: 10px;
         font-size: 20px;
-
-        .searchbar {
-            width: 100%;
-        }
 
         .input_field {
             font-size: larger;
@@ -99,8 +95,7 @@
         #icon {
             position: absolute;
             right: 24px;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 12px;
             cursor: pointer;
             border: none;
             background: transparent;
