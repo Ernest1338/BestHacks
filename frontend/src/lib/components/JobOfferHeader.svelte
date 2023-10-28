@@ -4,11 +4,14 @@
     export let name="pakowacz";
     export let employer="pecetserwis";
     export let employer_logo = "https://http.cat/401";
-    export let description;
-    export let salary_min= 3600;
-    export let salary_max= 3600;
-    export let type_of_employment;
+    export let description = "działa";
+    export let salary_min = 3600;
+    export let salary_max = 3600;
+    export let offer_type = "UoP";
+    export let type_of_employment = "Zdalna";
     export let localisation="Wałbrzysz";
+    export let wymiar_pracy = "Pełen etat"
+    
 
 </script>
 
@@ -38,10 +41,10 @@
                 </section>
         </section>
         <section id="employment_info">
-            <BasicJobInfo up = "Wymiar pracy", down = "Pełen etat"/>
+            <BasicJobInfo up = "Wymiar pracy", down={wymiar_pracy}/>
             <BasicJobInfo up = "Dowświadczenie", down="Niewymangane" />
-            <BasicJobInfo up = "Typ umowy", down = "Umowa o pracę" />
-            <BasicJobInfo up = "Tryb pracy", down = "Stacjonarny" />
+            <BasicJobInfo up = "Typ umowy", down = {offer_type} />
+            <BasicJobInfo up = "Tryb pracy", down = {type_of_employment} />
                 
 
         </section>
@@ -59,7 +62,7 @@ img {
     border-radius: 100%;
 }
 header {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: #111;

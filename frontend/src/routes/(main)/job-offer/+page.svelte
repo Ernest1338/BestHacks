@@ -6,18 +6,25 @@ import JobOfferHeader from "$lib/components/JobOfferHeader.svelte";
 </script>
 
 <main>
-    <JobOfferHeader />
-    <JobOfferDescription />
+    <div>
+        <JobOfferHeader />
+        <JobOfferDescription />
+    </div>
+    
 </main>
 
 <style lang="scss">
-main {
-    width: 100vw;
-    background: $primary;
-    position: relative;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    main {
+        width: 100vw;
+        background: $primary;
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    div {
+        width: 50%;
+    }
+
 </style>
