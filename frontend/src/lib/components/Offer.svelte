@@ -8,6 +8,7 @@
     export let salary_min;
     export let salary_max;
     export let type_of_employment;
+    export let localisation;
     // export let categories;
     // export let file;
 
