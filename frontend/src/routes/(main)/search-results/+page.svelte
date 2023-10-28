@@ -7,10 +7,7 @@
     
     let offers = searchResult;
     console.log(offers)
-    // onMount(async () => {
-    //     offers = await backend.get("joboffers", "dawid");
-    //     console.log(offers);
-    // })
+
 
 </script>
 
@@ -43,6 +40,8 @@ main {
             "filter offer offer"
             "filter offer offer";
     grid-template-columns: 0.3fr 0.7fr;
+    grid-auto-rows: max-content;
+    
     }
     #search {
         margin-top: 20px;
@@ -54,7 +53,6 @@ main {
     }
     #offers {
         grid-area: offer;
-        // margin-top: 100px;
         margin-right: 50px;
     }
     article {

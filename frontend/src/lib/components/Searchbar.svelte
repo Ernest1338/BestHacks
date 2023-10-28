@@ -1,74 +1,37 @@
 <script>
+	import { backend } from "$lib";
     import Fa from 'svelte-fa'
     import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-	import { backend, setSearchResult } from '$lib';
-	import { goto } from '$app/navigation';
-    
-    export let width = 60;
-    let query = "";
+    import {  setSearchResult } from "$lib";
+	import { goto } from "$app/navigation";
 
+    let query = "";
     let searchResult = [];
     async function sendQuery() {
-        // todo if query.length == 0 and filters(not done yet) is empty 
         if (query.length == 0) {
-            return 
+            return
         }
         searchResult = []
         searchResult = await backend.get("search", "dawid", { query: query });
-        if (searchResult.length == 0 ){
-            alert("Nie ma ofert spełniających podane kryteria")
-        }
         setSearchResult(searchResult)
+        console.log(searchResult)
         if (searchResult.length > 0) {
             goto("/search-results")
         }
-        console.log("searach" + searchResult)
     }
 </script>
 
-
-<form id="searchbar">
+<form id="searchbar" >
     <input type="text" name="search" id="search" bind:value={query} placeholder="Wyszukaj publikacje...">
     <button type="submit" id="icon" on:click={sendQuery}>
-        <Fa icon={faMagnifyingGlass} on:click={sendQuery} size="1x" color="#8f9a9c"/>
+        <Fa icon={faMagnifyingGlass} on:click={sendQuery} size="1.4x" color="#8f9a9c"/>
     </button>
 </form>
 
-
-
 <style lang="scss">
-    form {
-        // display: flex;
-        flex-direction: column;
-        row-gap: 10px;
-        font-size: 20px;
-
-        .input_field {
-            font-size: larger;
-            text-align: center;
-            border-radius: 15px;
-            border: none;
-            padding: 10px;
-            font-weight: 300;
-            font-family: 'DM Sans';
-            box-shadow: 0 0 10px #17171774;
-
-            &[type=number] {
-                width: 200px;
-            }
-        }
-        
-        .second_row {
-            width: 100%;
-            display: flex;
-            column-gap: 10px;
-        }
-    }
-
     #searchbar {
         width: 600px;
         position: relative;
-        height: fit-content;
 
         input {
             width: 100%;
@@ -93,14 +56,16 @@
         }
 
         #icon {
+            position: relative;
             position: absolute;
             right: 24px;
-            top: 12px;
+            top: 50%;
+            transform: translateY(-50%);
             cursor: pointer;
-            border: none;
-            background: transparent;
         }
     }
-
+    .search_navbar {
+        position: absolute;
+    }
 
 </style>
