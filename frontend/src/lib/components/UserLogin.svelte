@@ -8,7 +8,7 @@
 	}
     
     async function sendLoginData() {
-        const status = await backend.post("userlogin", loginData);
+        const status = await backend.post("userlogin", "martin", loginData);
         console.log(status);
     }
 

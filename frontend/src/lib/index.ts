@@ -1,14 +1,15 @@
-const backendIp: string = "156.17.72.12";
+const dawidBackend: string = "156.17.72.125:3001";
+const martinBackend: string = "156.17.72.12:3000";
 
 export const backend = {
-    get: async <Type>(endpoint: string, params: object = {}): Promise<Type> => {
-        const url = new URL(`http://${backendIp}:3000/${endpoint}.php`);
+    get: async <Type>(endpoint: string, backend: string, params: object = {}): Promise<Type> => {
+        const url = new URL(`http://${backend == "dawid" ? dawidBackend : martinBackend}/${endpoint}.php`);
         url.search = new URLSearchParams(params).toString();
         const result = await fetch(url.toString());
         return await result.json();
     },
-    post: async <Type>(endpoint: string, params: object = {}): Promise<Type> => {
-        const result = await fetch(`http://${backendIp}:3000/${endpoint}.php`, {
+    post: async <Type>(endpoint: string, backend: string, params: object = {}): Promise<Type> => {
+        const result = await fetch(`http://${backend == "dawid" ? dawidBackend : martinBackend}/${endpoint}.php`, {
             method: "POST",
             headers: {
                 Accept: 'application/json',

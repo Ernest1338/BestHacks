@@ -8,7 +8,7 @@
 	}
     
     function sendLoginData() {
-        backend.post("/companylogin", loginData);
+        backend.post("companylogin", "martin", loginData);
     }
 
 

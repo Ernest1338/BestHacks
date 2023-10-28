@@ -16,7 +16,7 @@
 	}
     
     function sendRegisterData() {
-        backend.post("/companyregister", registerData);
+        backend.post("companyregister", "martin", registerData);
     }
 </script>
 
