@@ -33,8 +33,8 @@
     z-index: 1;
 
     .menu-element {
-        color: #d8dcd6;
-        font-size: 20px;
+        color: white;
+        font-size: 26px;
         font-weight: 600;
         transition: 0.2s ease-in-out;
         cursor: pointer;

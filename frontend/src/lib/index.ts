@@ -7,6 +7,7 @@ export function setSearchResult(val) {
     searchResult = val;
 }
 
+
 export const backend = {
     get: async <Type>(endpoint: string, backend: string, params: object = {}): Promise<Type> => {
         const url = new URL(`http://${backend == "dawid" ? dawidBackend : martinBackend}/${endpoint}${backend != "dawid" ? ".php" : ""}`);
