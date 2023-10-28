@@ -23,7 +23,7 @@
 <form id="searchbar">
     <input type="text" name="search" id="search" bind:value={query} placeholder="Wyszukaj publikacje...">
     <button type="submit" id="icon" on:click={sendQuery}>
-        <Fa icon={faMagnifyingGlass} on:click={sendQuery} size="1.4x" color="#8f9a9c"/>
+        <Fa icon={faMagnifyingGlass} on:click={sendQuery} size="1x" color="#8f9a9c"/>
     </button>
 </form>
 
@@ -89,12 +89,13 @@
         }
 
         #icon {
-            position: relative;
             position: absolute;
             right: 24px;
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
+            border: none;
+            background: transparent;
         }
     }
 

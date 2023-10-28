@@ -26,6 +26,7 @@
 
 		h1 {
 			font-size: 48px;
+			margin-top: 0;
 			color: white;
 		}
 	}
