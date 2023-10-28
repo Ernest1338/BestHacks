@@ -9,6 +9,7 @@
 		description: "Prosta praca manualna nie wymagająca dużej sprawności ruchowej Prosta praca manualna nie wymagająca dużej sprawności ruchowej Prosta praca manualna nie wymagająca dużej sprawności ruchowej ",
         salary_min: 3600,
         salary_max: 4500,
+        type_of_employment: "Umowa o pracę"
 	}
 
 
