@@ -6,7 +6,7 @@
 </script>
 
 
-<nav class="menu"   in:fly={{ x: 300, delay: 0, duration: 300 }} out:fly={{ x: 300, duration: 300 }}>
+<nav class="menu" in:fly={{ x: 300, delay: 0, duration: 300 }} out:fly={{ x: 300, duration: 300 }}>
     <a class="menu-element" href="/user-profile">Profil</a>
     <a class="menu-element" href="/login">Zaloguj się</a>
     <a class="menu-element" href="/register">Zarejestruj się</a>
@@ -15,6 +15,7 @@
 <style lang="scss">
 
 .menu {
+    pointer-events: auto;
     background-color: $secondary;
     color: white;
     position: absolute;

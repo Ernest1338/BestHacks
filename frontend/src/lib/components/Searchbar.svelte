@@ -3,13 +3,15 @@
 export let width = 60;
 </script>
 
+<h1>Wyszukaj pracy</h1>
+
 <form style = "width:{width}%;">
     <input type="text" name="search" class="searchbar input_field" placeholder="wyszukaj firmę, stanowisko itp...">
 
     <section class="second_row">
-        <input type="text" name="location" class="input_field" id="location_field">
-        <input type="number" min="0" max="600" name="distance" class="input_field" id="distance_field" >
-        <select name="categories" id="categories">
+        <input type="text" name="location" class="input_field" id="location_field" placeholder="Lokacja">
+        <input type="number" min="0" max="600" name="distance" class="input_field" id="distance_field" placeholder="Dystans">
+        <select name="categories" id="categories" class="input_field">
             <option value="stacjonarna">stacjonarna</option>
             <option value="hybrydowa">Hybrydowa</option>
             <option value="zdalne">Zdalna</option>
@@ -19,38 +21,45 @@ export let width = 60;
 
 
 <style lang="scss">
+    h1 {
+        font-size: 48px;
+        color: $secondary;
+    }
+
     form {
         display: flex;
         flex-direction: column;
-        row-gap: 5px;
+        row-gap: 10px;
         font-size: 20px;
 
         .searchbar {
             width: 100%;
         }
 
-        .input_field {
+        input.input_field {
             font-size: larger;
             text-align: center;
-        }
-
-        select {
+            border-radius: 15px;
+            border: none;
             padding: 10px;
-            font-size: 20px;
-            border-radius: 5px;
+            font-weight: 300;
+            font-family: 'DM Sans';
+            box-shadow: 0 0 10px #17171774;
+
+            &[type=number] {
+                width: 200px;
+            }
         }
         
         .second_row {
             width: 100%;
             display: flex;
-            justify-content: space-around;
+            column-gap: 10px;
 
-            input[type=number] {
-                width: 20%;
-            }
-
-            input:focus {
-                border: solid 4px black;
+            select {
+                padding: 10px;
+                font-size: 20px;
+                border-radius: 5px;
             }
         }
     }
