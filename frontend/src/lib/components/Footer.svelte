@@ -9,18 +9,10 @@
 </footer>
 
 <style>
-<<<<<<< HEAD
-footer {
-    background: #232425;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-=======
     footer {
+        background: #232425;
         display: flex;
         justify-content: space-between;
         width: 100%;
     }
->>>>>>> 3bd5536fd2f9ecb5e34e518aa3baebfa3034ebfc
 </style>
