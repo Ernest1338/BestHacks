@@ -6,9 +6,7 @@
 <section class="app">
     <Navbar />
     
-    <main>
-        <slot></slot>
-    </main>
+    <slot></slot>
     
     <Footer />
 </section>
