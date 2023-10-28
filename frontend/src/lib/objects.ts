@@ -22,6 +22,7 @@ export interface CompanyRegisterData {
     readonly name: string;
     readonly surname: string;
     readonly password: string;
+    readonly email: string;
 }
 
 export interface CompanyLoginData {

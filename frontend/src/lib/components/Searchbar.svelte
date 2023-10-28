@@ -18,6 +18,9 @@
         if (searchResult.length > 0) {
             goto("/search-results")
         }
+        else {
+            alert("Nie znaleziono oferty dla podanych kryteriów")
+        }
     }
 </script>
 
