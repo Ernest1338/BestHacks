@@ -5,7 +5,7 @@
     import { goto } from "$app/navigation";
     import { onMount } from 'svelte';
 	import { assets } from "$lib";
-  
+
     // let username = browser && cookies.get("loggedAs") != undefined ? cookies.get("loggedAs") : "Niezalogowany"
     let showMenu = false;
 
@@ -28,7 +28,7 @@
 <nav>
     <div class="logo-container" on:click={() => goto("/")}>
         <img src="{assets.getAssetUrl("logo.svg")}" alt="logo" srcset="" class="logo">
-        <span>JobForEveryone</span>
+        <span>Praca Dla Każdego</span>
     </div>
 
     <div class="menu-button" on:click={switchMenu}>

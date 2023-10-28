@@ -13,6 +13,7 @@
             email: email,
             password: password
         });
+        console.log(result);
         result = JSON.parse(result);
         if(result.status == "ERROR") {
             isError = true;

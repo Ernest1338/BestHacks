@@ -2,13 +2,9 @@
 	import { backend, searchResult } from "$lib";
 	import Offer from "$lib/components/Offer.svelte";
 	import Searchbar from "$lib/components/Searchbar.svelte";
-	import type { JobOfferData } from "$lib/objects";
-	import { onMount } from "svelte";
     
     let offers = searchResult;
     console.log(offers)
-
-
 </script>
 
 <main>
@@ -16,7 +12,14 @@
     <Searchbar />
 </section>
 <section id="filters">
-
+    <h2>Tytuł</h2>
+    <input type="text" placeholder="Tytuł pracy">
+    <h2>Kategoria</h2>
+    <input type="text" placeholder="Kategoria">
+    <h2>Lokalizacja</h2>
+    <input type="text" placeholder="Lokalizacja">
+    <h2>Niepełnosprawności</h2>
+    <input type="text" placeholder="Niepełnosprawności">
 </section>
 <section id="offers">
     {#each offers as offer}
@@ -48,17 +51,30 @@
         justify-content: center;
         grid-area: search;
         width: 100%;
-        margin: 40px 0 20px 0;
+        margin: 40px 0;
     }
 
     #offers {
-        grid-area: offer;
-        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        padding: 0 20px;
     }
-    
-    article {
-        margin-top: 40px;
-        margin-bottom: 40px;
+
+    #filters {
+        padding: 0 20px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+
+        input {
+            border-radius: 20px;
+            border: none;
+            padding: 10px 15px;
+            background: linear-gradient(#303133, #303133) padding-box, linear-gradient(90deg, #ed6e61, #6359e1) border-box;
+            border: 4px solid transparent;
+            color: white;
+        }
     }
 
 </style>
