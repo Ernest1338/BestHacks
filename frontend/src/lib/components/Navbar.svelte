@@ -1,13 +1,10 @@
 <script>
     import SideMenu from "./SideMenu.svelte";
     import { goto } from "$app/navigation";
-	import { cookies } from "$lib";
-	import { browser } from "$app/environment";
     import { onMount } from 'svelte';
   
     // let username = browser && cookies.get("loggedAs") != undefined ? cookies.get("loggedAs") : "Niezalogowany"
     let showMenu = false;
-
 
     function switchMenu(event) {
         event.stopPropagation();
@@ -32,24 +29,20 @@
         <span>Scholar Hub</span>
     </div>
 
-    <div id="menu_button" on:click={switchMenu}>
-        <!-- {#if username == "Niezalogowany"} -->
-            <!-- <span class="log_button" on:click={() => goto("/login")}>Zaloguj</span>
-            <span class="register_button" on:click={() => goto("/register")}>Zarejestruj</span> -->
-        <!-- {/if} -->
-
+    <div class="menu-button" on:click={switchMenu}>
         {#if showMenu}
             <div class="profile-menu">
                 <SideMenu />
             </div>
         {/if}
-        </div>
+    </div>
 </nav>
 
 <style lang="scss">
-    #menu_button {
+    .menu-button {
         width: 30px;
         background: white;
+        cursor: pointer;
     }
     .log_button, .register_button {
         color: rgb(225, 220, 209);
