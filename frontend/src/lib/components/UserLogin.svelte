@@ -7,8 +7,9 @@
 		password: ""
 	}
     
-    function sendLoginData() {
-        backend.post("/userlogin", loginData);
+    async function sendLoginData() {
+        const status = await backend.post("userlogin", loginData);
+        console.log(status);
     }
 
 
