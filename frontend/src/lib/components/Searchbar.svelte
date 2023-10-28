@@ -1,12 +1,21 @@
 <script>
     import Fa from 'svelte-fa'
     import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-
+	import { backend, setSearchResult } from '$lib';
+	import { goto } from '$app/navigation';
+    
     export let width = 60;
     let query = "";
 
-    function sendQuery() {
-
+    let searchResult = [];
+    async function sendQuery() {
+        searchResult = []
+        searchResult = await backend.get("search", "dawid", { query: query });
+        setSearchResult(searchResult)
+        if (searchResult.length > 0) {
+            goto("/search-results")
+        }
+        console.log(searchResult)
     }
 </script>
 
@@ -17,19 +26,7 @@
         <Fa icon={faMagnifyingGlass} on:click={sendQuery} size="1.4x" color="#8f9a9c"/>
     </button>
 </form>
-<!-- <form style = "width:{width}%;">
-    <input type="text" name="search" class="searchbar input_field" placeholder="wyszukaj firmę, stanowisko itp...">
 
-    <section class="second_row">
-        <input type="text" name="location" class="input_field" id="location_field" placeholder="Lokacja">
-        <input type="text" min="0" max="600" name="disabilities" class="input_field" placeholder="Dystans">
-        <select name="categories" id="categories" class="input_field">
-            <option value="stacjonarna">stacjonarna</option>
-            <option value="hybrydowa">Hybrydowa</option>
-            <option value="zdalne">Zdalna</option>
-        </select>
-    </section>
-</form> -->
 
 
 <style lang="scss">

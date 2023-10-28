@@ -1,6 +1,12 @@
 const dawidBackend: string = "156.17.72.125:3001";
 const martinBackend: string = "156.17.72.12:3000";
 
+export let searchResult;
+
+export function setSearchResult(val) {
+    searchResult = val;
+}
+
 export const backend = {
     get: async <Type>(endpoint: string, backend: string, params: object = {}): Promise<Type> => {
         const url = new URL(`http://${backend == "dawid" ? dawidBackend : martinBackend}/${endpoint}${backend != "dawid" ? ".php" : ""}`);
