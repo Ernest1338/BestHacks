@@ -56,12 +56,13 @@
         }
 
         #icon {
-            position: relative;
             position: absolute;
             right: 24px;
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
+            background: transparent;
+            border: none;
         }
     }
     .search_navbar {
