@@ -1,11 +1,13 @@
 <script>
-	import JobOfferHeader from "$lib/components/JobOfferHeader.svelte";
+	import JobOfferDescription from "$lib/components/JobOfferDescription.svelte";
+import JobOfferHeader from "$lib/components/JobOfferHeader.svelte";
 
 
 </script>
 
 <main>
     <JobOfferHeader />
+    <JobOfferDescription />
 </main>
 
 <style lang="scss">
