@@ -15,8 +15,6 @@ export let width = 60;
             <option value="zdalne">Zdalna</option>
         </select>
     </section>
-
-
 </form>
 
 
