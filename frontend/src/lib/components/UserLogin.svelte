@@ -17,14 +17,14 @@
 </script>
 
 <form>
-    <section>
+    <!-- <section> -->
         <label for="email">Adres mailowy</label>
         <input type="email" name="email" bind:value={loginData.email}>
-    </section>
-    <section>
+    <!-- </section>
+    <section> -->
         <label for="password">Hasło</label>
         <input type="password" name="password" bind:value={loginData.password}>
-    </section>
+    <!-- </section> -->
     <button type="submit" on:click={sendLoginData}>Zaloguj się</button>
 </form>
 

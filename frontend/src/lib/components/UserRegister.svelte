@@ -33,9 +33,4 @@
 
 <style>
 
-form {
-    width: 600px;
-    height: 800px;
-}
-
 </style>
