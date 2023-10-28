@@ -39,7 +39,7 @@ main {
     flex-grow: 1;
     display: grid;
     grid-template-areas: 
-            "none search search"
+            "search search search"
             "filter offer offer"
             "filter offer offer";
     grid-template-columns: 0.3fr 0.7fr;
