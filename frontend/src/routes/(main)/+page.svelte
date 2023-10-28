@@ -9,7 +9,12 @@
 
 <style lang="scss">
 	main {
+		position: relative;
 		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 
 		.background {
 			position: absolute;
