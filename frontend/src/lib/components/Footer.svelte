@@ -17,6 +17,7 @@
 
 <style>
 footer {
+    background: #232425;
     display: flex;
     justify-content: space-between;
     width: 100%;
