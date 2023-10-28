@@ -70,7 +70,9 @@
             align-items: center;
 
             img {
-                width: 100px;
+                width: 90px;
+                border-radius: 5px;
+                margin: 5px;
             }
         }
 
