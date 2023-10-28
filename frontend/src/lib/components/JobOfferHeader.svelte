@@ -45,23 +45,26 @@
             <BasicJobInfo up = "Dowświadczenie", down="Niewymangane" />
             <BasicJobInfo up = "Typ umowy", down = {offer_type} />
             <BasicJobInfo up = "Tryb pracy", down = {type_of_employment} />
-                
-
+            
         </section>
 </header>
 
 
 <style lang="scss">
     *{
-        align-items: center;
-        justify-content: center;
+
     }
 img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 100%;
 }
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    overflow: hidden;
     width: 100%;
     display: flex;
     flex-direction: column;
