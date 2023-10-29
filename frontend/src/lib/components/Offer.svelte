@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { goto } from "$app/navigation";
-
+	import Fa from "svelte-fa";
+    import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
     export let id: string;
     export let employer: string;
@@ -25,6 +25,10 @@
         <div class="right">
             <div class="top">
                 <span class="job_title">{job_title}</span>
+                <span class="">
+                    <Fa icon={faCheck} color="#00ff00" />
+                    Przystosowane dla osób niepełnosprawnych
+                </span>
                 <span class="job_salary">{salary_min} - {salary_max} PLN</span>
             </div>
             <div class="bottom">
