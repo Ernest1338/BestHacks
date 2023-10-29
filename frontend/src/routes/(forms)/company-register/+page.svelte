@@ -1,62 +1,102 @@
 <script>
     import { goto } from '$app/navigation';
 
+    let email = ""
+    let name = ""
+    let surname = ""
+    let password = ""
+    let phone = ""
+    let companyName = ""
+    let nip = ""
+    let regon = ""
+    let country = ""
+    let adres = ""
+    let state = ""
+    let city = ""
+    let postcode = ""
+    let street = ""
 
+    async function register_company(){
+        const registerData = await backend.post("companyregister", {
+                email: email,
+                name: name,
+                surname: surname,
+                password: password,
+                phone: phone,
+                companyName: companyName,
+                nip: nip,
+                regon: regon,
+                country: country,
+                state: state,
+                city: city,
+                postcode: postcode,
+                street: street,       
+            });
+        console.log(registerData);
+        if(registerData.status == "OK") {
+            cookies.set("authkey", registerData.authkey);
+            cookies.set("loggedAs", user);
+            goto("/");
+        } else if(registerData.status == "ERROR") {
+            console.error(registerData.message);
+        }
+        
+    }
 
 </script>
 
-<form action="company-register.php" method="post">
+<form method="post">
     <section id="double">
 
         <section id="left">
             <h1>Zarejestruj firmę</h1>
             <label for="name">Imię</label>
-            <input type="text" name="name" placeholder="Jan">
+            <input type="text" name="name" placeholder="Jan" bind:value={name}>
             
             <label for="surname">Nazwisko</label>
-            <input type="text" form="surname" placeholder="Kowalski">
+            <input type="text" form="surname" placeholder="Kowalski" bind:value={surname}>
 
             <label for="mail">Email</label>
-            <input type="email" name="mail" placeholder="kowalski@poczta.pl">
+            <input type="email" name="mail" placeholder="kowalski@poczta.pl" bind:value={email}>
             
             
             <label for="password">Hasło</label>
-            <input type="password" form="password" placeholder="hasło">
+            <input type="password" form="password" placeholder="hasło" bind:value={password}>
             
             <label for="phone">Telefon</label>
-        <input type="tel" id="phone" name="phone" placeholder="123435789">
+        <input type="tel" id="phone" name="phone" placeholder="123435789" bind:value={phone}>
         
         <label for="nazwa_firmy">Nazwa firmy</label>
-        <input type="text" form="nazwa_firmy" placeholder="Janex SA"> 
+        <input type="text" form="nazwa_firmy" placeholder="Janex SA" bind:value={companyName}> 
         
     </section>
     <section id="right">
 
 
         <label for="REGON">REGON</label>
-        <input type="text" form="REGON" placeholder="123456789">
+        <input type="text" form="REGON" placeholder="123456789" bind:value={regon}>
         
         <label for="nip">NIP</label>
-        <input type="text" form="nip" placeholder="1234563218">
+        <input type="text" form="nip" placeholder="1234563218" bind:value={nip}>
         
         <label for="country">Kraj</label>
-        <input type="text" form="country" placeholder="Polska">
+        <input type="text" form="country" placeholder="Polska" bind:value={country}>
         
         <label for="region">region</label>
-        <input type="text" form="region" placeholder="Dolny Śląsk">
+        <input type="text" form="region" placeholder="Dolny Śląsk" bind:value={state}>
         
         <label for="Miasto">Miasto</label>
-        <input type="text" form="Miasto" placeholder="Wrocław">
+        <input type="text" form="Miasto" placeholder="Wrocław" bind:value={city}>
         
         <label for="Kod_pocztowy">Kod pocztowy</label>
-        <input type="text" form="Kod_pocztowy" pattern="[0-9]{5}" placeholder="41-501">
+        <input type="text" form="Kod_pocztowy" pattern="[0-9]{5}" placeholder="41-501" bind:value={postcode}>
         
         <label for="adres">Adres</label>
-        <input type="text" form="adres" placeholder="Uliczna 3/1">
+        <input type="text" form="adres" placeholder="Uliczna 3/1" bind:value={adres}>
     </section>
 </section>
     <section id="btn_section">
-        <button type="submit">Zarejestruj się</button>
+        <button type="submit" on:click={register_company}>Zarejestruj się</button>
 
         <p class="signup">Masz konto?<button id="gotolog" type="button" on:click={() => goto("/login")}>Zaloguj się</button></p>
 
