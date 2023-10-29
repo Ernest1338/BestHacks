@@ -11,48 +11,48 @@
         <section id="left">
             <h1>Zarejestruj firmę</h1>
             <label for="name">Imię</label>
-            <input type="text" name="name">
+            <input type="text" name="name" placeholder="Jan">
             
             <label for="surname">Nazwisko</label>
-            <input type="text" form="surname">
+            <input type="text" form="surname" placeholder="Kowalski">
 
             <label for="mail">Email</label>
-            <input type="email" name="mail">
+            <input type="email" name="mail" placeholder="kowalski@poczta.pl">
             
             
             <label for="password">Hasło</label>
-            <input type="password" form="password">
+            <input type="password" form="password" placeholder="hasło">
             
             <label for="phone">Telefon</label>
-        <input type="tel" id="phone" name="phone">
+        <input type="tel" id="phone" name="phone" placeholder="123435789">
         
         <label for="nazwa_firmy">Nazwa firmy</label>
-        <input type="text" form="nazwa_firmy">
+        <input type="text" form="nazwa_firmy" placeholder="Janex SA"> 
         
     </section>
     <section id="right">
 
         
         <label for="REGON">REGON</label>
-        <input type="text" form="REGON">
+        <input type="text" form="REGON" placeholder="123456789">
         
         <label for="nip">NIP</label>
-        <input type="text" form="nip">
+        <input type="text" form="nip" placeholder="1234563218">
         
         <label for="country">Kraj</label>
-        <input type="text" form="country">
+        <input type="text" form="country" placeholder="Polska">
         
         <label for="region">region</label>
-        <input type="text" form="region">
+        <input type="text" form="region" placeholder="Dolny Śląsk">
         
         <label for="Miasto">Miasto</label>
-        <input type="text" form="Miasto">
+        <input type="text" form="Miasto" placeholder="Wrocław">
         
         <label for="Kod_pocztowy">Kod pocztowy</label>
-        <input type="text" form="Kod_pocztowy" pattern="[0-9]{5}">
+        <input type="text" form="Kod_pocztowy" pattern="[0-9]{5}" placeholder="41-501">
         
         <label for="adres">Adres</label>
-        <input type="text" form="adres">
+        <input type="text" form="adres" placeholder="Uliczna 3/1">
     </section>
 </section>
     <section id="btn_section">
