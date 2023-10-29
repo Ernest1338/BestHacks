@@ -1,7 +1,7 @@
 <script>
     import { goto } from '$app/navigation';
 
-    
+
 
 </script>
 
@@ -12,45 +12,45 @@
             <h1>Zarejestruj firmę</h1>
             <label for="name">Imię</label>
             <input type="text" name="name">
-            
+
             <label for="surname">Nazwisko</label>
             <input type="text" form="surname">
 
             <label for="mail">Email</label>
             <input type="email" name="mail">
-            
-            
+
+
             <label for="password">Hasło</label>
             <input type="password" form="password">
-            
+
             <label for="phone">Telefon</label>
         <input type="tel" id="phone" name="phone">
-        
+
         <label for="nazwa_firmy">Nazwa firmy</label>
         <input type="text" form="nazwa_firmy">
-        
+
     </section>
     <section id="right">
 
-        
+
         <label for="REGON">REGON</label>
         <input type="text" form="REGON">
-        
+
         <label for="nip">NIP</label>
         <input type="text" form="nip">
-        
+
         <label for="country">Kraj</label>
         <input type="text" form="country">
-        
+
         <label for="region">region</label>
         <input type="text" form="region">
-        
+
         <label for="Miasto">Miasto</label>
         <input type="text" form="Miasto">
-        
+
         <label for="Kod_pocztowy">Kod pocztowy</label>
         <input type="text" form="Kod_pocztowy" pattern="[0-9]{5}">
-        
+
         <label for="adres">Adres</label>
         <input type="text" form="adres">
     </section>

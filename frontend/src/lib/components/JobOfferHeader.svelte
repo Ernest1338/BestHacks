@@ -10,7 +10,6 @@
     export let offer_type;
     export let type_of_employment;
     export let location;
-    console.log(name, employer, employer_logo, description, salary_min, salary_max, offer_type, type_of_employment, location);
 </script>
 
 
