@@ -17,15 +17,17 @@ import JobOfferHeader from "$lib/components/JobOfferHeader.svelte";
     main {
         width: 100vw;
         background: $primary;
-        position: relative;
         flex-grow: 1;
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
+
     }
     div {
-        overflow: hidden;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 50%;
     }
 
