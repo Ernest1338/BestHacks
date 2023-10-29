@@ -28,16 +28,13 @@
                             <p><strong>{employer}</strong></p>
                             <p>{localisation}</p>
                             <p>{salary_min} - {salary_max} brutto</p>
-                </section>
+                    </section>
         </section>
         <section id="employment_info">
             <BasicJobInfo up = "Wymiar pracy", down={wymiar_pracy}/>
             <BasicJobInfo up = "Dowświadczenie", down="Niewymangane" />
             <BasicJobInfo up = "Typ umowy", down = {offer_type} />
             <BasicJobInfo up = "Tryb pracy", down = {type_of_employment} />
-        </section>
-        <section id="test">
-
         </section>
 </header>
 
@@ -51,40 +48,45 @@ img {
     margin: 0 10px 0 10px;
 }
 p {
-    margin-left: 10px;
-    margin-right: 10px;
+
 }
-#test {
-    background-color: aqua;
-}
+
 header {
+    color: $text;
     display: flex;
     border-radius: 20px;
     overflow: hidden;
     height: 250px;
     width: 100%;
-    background-color: #111;
+    background: linear-gradient(#303133,#303133) padding-box,linear-gradient(90deg,#ed6e61,#6359e1) border-box;
+    border : 4px solid transparent;
+    
 }
+
 #job_info {
-    background: #999;
     display: flex;
     align-items: center;
     height: 100%;
+    background: transparent;
 }
 #employment_info {
+    background: transparent;
     height: 100%;
     width: 100%;
-    border-left: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #info_section {
+    background: transparent;
     display: flex;
     flex-direction: column;   
 }
 #info_section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
     width: 100%;
 }
 

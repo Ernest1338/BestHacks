@@ -16,45 +16,56 @@ export let description = "test"
         delectus cupiditate neque ipsum voluptas quis consectetur, pariatur facilis?
         Nisi, rerum magnam? Eligendi explicabo odit beatae magnam officiis voluptatum cum dignissimos totam quos a assumenda ea, in voluptas quas? Provident autem, quae magnam aperiam eaque possimus repellat voluptatem inventore.
     </p>
-    <form method="post" action="">
+    <form method="post" action="http://test.php">
         <label for="file">Wgraj swoje CV</label>
         <input id="file" name="file" type="file" />
         <button>Upload</button>
-      </form>
+    </form>
     
 </section>
 
 <style lang="scss">
     *{
-        color: $primary;
+        color: $text;
     }
-    form {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    button {
-        width: 50%;
-    }
+
 #description {
     border-radius: 20px;
-    margin: 30px;
+    margin: 30px 0 30px 0;
     width: 100%;
     min-height: 50vh;
     height: fit-content;
-    background-color: aqua;
+    background: linear-gradient(#303133,#303133) padding-box,linear-gradient(90deg,#ed6e61,#6359e1) border-box;
+    border: 4px solid transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+h3 {
+    font-size: 28px;
 }
 p {
     font-size: 20px;
     margin-left: 50px;
     margin-right: 50px;
-    display: flex;
-    flex-direction: column;
 }
-
+form {
+        color: black;
+        background: transparent;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+        text-align: center;
+    }
+    input {
+        margin-top: 10px;
+    }
+    button {
+        margin-top: 10px;
+        width: 100px;
+        color: black;
+    }
 
 </style>
