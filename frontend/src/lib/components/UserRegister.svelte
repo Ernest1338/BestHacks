@@ -3,8 +3,10 @@
 	import { backend, cookies } from '$lib';
 
     let email = "";
+    let user = "";
     let username = "";
     let password = "";
+    let surname = "";
     let confirmPassword = "";
 
     async function register() {

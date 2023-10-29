@@ -40,8 +40,12 @@ app.get('/ping', (req, res) => {
 
 app.get('/joboffer', async (req, res) => {
     let id = req.query.id;
-    var rows = await db_query("SELECT * FROM joboffers WHERE id = " + id);
-    res.json(rows);
+    let rows = await db_query("SELECT * FROM joboffers WHERE id = " + id);
+    if (rows.length === 0) {
+        return res.json({});
+    } else {
+        return res.json(rows[0]);
+    }
 });
 
 app.get('/get_logo', async (req, res) => {
