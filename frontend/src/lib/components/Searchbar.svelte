@@ -4,8 +4,20 @@
     import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
     import {  setSearchResult } from "$lib";
 	import { goto } from "$app/navigation";
+	import { createEventDispatcher } from "svelte";
+
+    const dispatch = createEventDispatcher();
 
     let query = "";
+
+    function onType(event) {
+        dispatch('onType', query);
+    }
+
+    function submit() {
+        dispatch('submit', query);
+    }
+
     let searchResult = [];
     async function sendQuery() {
         if (query.length == 0) {
@@ -13,8 +25,8 @@
         }
         searchResult = []
         searchResult = await backend.get("search", "dawid", { query: query });
-        setSearchResult(searchResult)
-        console.log(searchResult)
+        setSearchResult(searchResult);
+        submit();
         if (searchResult.length > 0) {
             goto("/search-results")
         }
@@ -25,7 +37,7 @@
 </script>
 
 <form id="searchbar" >
-    <input type="text" name="search" id="search" bind:value={query} placeholder="Stanowisko, firma, słowa kluczowe, ...">
+    <input type="text" name="search" id="search" on:input={onType} bind:value={query} placeholder="Stanowisko, firma, słowa kluczowe, ...">
     <button type="submit" id="icon" on:click={sendQuery}>
         <Fa icon={faMagnifyingGlass} on:click={sendQuery} size="1.4x" color="#8f9a9c"/>
     </button>

@@ -4,21 +4,22 @@
 
     let email = "";
     let user = "";
-    let username = "";
     let password = "";
     let surname = "";
     let confirmPassword = "";
 
     async function register() {
-        const registerData = await backend.post("register", {
+        const registerData = await backend.post("userregister", {
             email: email,
-            username: username,
+            user: user,
+            surname: surname,
             password: password,
             confirm_password: confirmPassword
         });
+        console.log(registerData);
         if(registerData.status == "OK") {
             cookies.set("authkey", registerData.authkey);
-            cookies.set("loggedAs", username);
+            cookies.set("loggedAs", user);
             goto("/");
         } else if(registerData.status == "ERROR") {
             console.error(registerData.message);
@@ -30,10 +31,10 @@
     <h1>Zarejestruj</h1>
     <label for="email">Email</label>
     <input type="email" name="email" id="email" placeholder="przykładowy-email@gmail.com" bind:value={email}>
-    <label for="name">name</label>
-    <input type="text" name="name" id="name" placeholder="Nazwa Użytkownika" bind:value={user}>
-    <label for="name">surname</label>
-    <input type="text" name="surname" id="surname" placeholder="Nazwa Użytkownika" bind:value={surname}>
+    <label for="name">Imie</label>
+    <input type="text" name="name" id="name" placeholder="Imie" bind:value={user}>
+    <label for="name">Nazwisko</label>
+    <input type="text" name="surname" id="surname" placeholder="Nazwisko" bind:value={surname}>
     <label for="password">Hasło</label>
     <input type="password" name="password" id="password" placeholder="Hasło" bind:value={password}>
     <label for="confirmPassword">Powtórz Hasło</label>

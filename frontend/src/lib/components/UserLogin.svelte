@@ -1,6 +1,6 @@
 <script>
     import { goto } from '$app/navigation';
-	import { backend, cookies } from '$lib';
+	import { backend, cookies, loginutil } from '$lib';
 
     let email = "";
     let password = "";
@@ -19,19 +19,18 @@
             isError = true;
             errorMessage = result.message;
         }
-        // if(loginData.status === "OK") {
-        //     cookies.set("authkey", loginData.authkey);
-        //     cookies.set("loggedAs", email);
-        //     goto("/");
-        // } else if(loginData.status === "ERROR") {
-        //     console.error(loginData.message);
-        // }
+        if(loginData.status === "OK") {
+            loginutil.login(email, loginData.authkey);
+            goto("/");
+        } else if(loginData.status === "ERROR") {
+            console.error(loginData.message);
+        }
     }
 </script>
 
 <form>
     <h1>Logowanie</h1>
-    <label for="email">Email / Tel</label>
+    <label for="email">Email / Telefon</label>
     <input type="text" name="email" id="email" placeholder="test.email@gmail.com" bind:value={email}>
     <label for="password">Hasło</label>
     <input type="password" name="password" id="password" placeholder="Hasło" bind:value={password}>

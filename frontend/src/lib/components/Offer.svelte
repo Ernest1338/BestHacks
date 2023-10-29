@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { goto } from "$app/navigation";
-
+	import Fa from "svelte-fa";
+    import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
     export let id: string;
     export let employer: string;
@@ -25,10 +25,18 @@
         <div class="right">
             <div class="top">
                 <span class="job_title">{job_title}</span>
+                <span class="">
+                    <Fa icon={faCheck} color="#00ff00" />
+                    Przystosowane dla osób niepełnosprawnych
+                </span>
                 <span class="job_salary">{salary_min} - {salary_max} PLN</span>
             </div>
             <div class="bottom">
                 <span class="job_type">Typ umowy: {type_of_employment}</span>
+                <div class="tags">
+                    <span>Wykluczone niepełnosprawności:</span>
+                    <span class="disability">{excluded_disabilities}</span>
+                </div>
                 <span class="job_location">{location}</span>
             </div>
         </div>
@@ -40,7 +48,7 @@
         color: white;
         display: flex;
         box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 2px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
-        padding: 10px 5px;
+        padding: 20px 10px;
         border-radius: 6px;
         background: #2a2a2a;
         cursor: pointer;
@@ -60,7 +68,6 @@
                 width: 90px;
                 height: 45px;
                 border-radius: 5px;
-                margin: 5px;
             }
         }
 
@@ -95,7 +102,17 @@
             font-size: 16px;
         }
 
+        .tags {
+            .disability {
+                border: 2px solid #ff7206;
+                border-radius: 20px;
+                padding: 2px 10px;
+                color: #ff7206;
+            }
+        }
+            
         .job_location {
+            margin-left: 10px;
             font-size: 16px;
         }
 
