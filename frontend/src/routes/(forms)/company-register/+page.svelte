@@ -1,6 +1,8 @@
 <script>
     import { goto } from '$app/navigation';
 
+    
+
 </script>
 
 <form action="company-register.php" method="post">
@@ -8,17 +10,18 @@
 
         <section id="left">
             <h1>Zarejestruj firmę</h1>
-            <label for="mail">Email</label>
-            <input type="email" name="mail">
-            
             <label for="name">Imię</label>
             <input type="text" name="name">
             
-            <label for="password">Hasło</label>
-            <input type="password" form="password">
-            
             <label for="surname">Nazwisko</label>
             <input type="text" form="surname">
+
+            <label for="mail">Email</label>
+            <input type="email" name="mail">
+            
+            
+            <label for="password">Hasło</label>
+            <input type="password" form="password">
             
             <label for="phone">Telefon</label>
         <input type="tel" id="phone" name="phone">
@@ -61,6 +64,9 @@
 </form>
 
 <style>
+    #left, #right {
+        height: 100%;
+    }
     p {
         margin: 25px 0 0 0;
         font-size: 14px;
