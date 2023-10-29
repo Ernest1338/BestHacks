@@ -17,7 +17,7 @@
     let street = ""
 
     async function register_company(){
-        const registerData = await backend.post("companyregister", {
+        const registerData = await backend.post("companyregister","martin", {
                 email: email,
                 name: name,
                 surname: surname,
