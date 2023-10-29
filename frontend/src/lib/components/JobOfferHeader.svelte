@@ -1,33 +1,31 @@
 <script>
 	import BasicJobInfo from "./BasicJobInfo.svelte";
 
-    export let name;
     export let employer;
+    export let job_title;
     export let employer_logo;
     export let description;
     export let salary_min;
     export let salary_max;
     export let offer_type;
     export let type_of_employment;
-    export let localisation;
-    export let wymiar_pracy;
+    export let location;
+    console.log(name, employer, employer_logo, description, salary_min, salary_max, offer_type, type_of_employment, location);
 </script>
 
 
 <header id="info">
         <section id="job_info">
-                <img src="http://156.17.72.125:3001/get_logo?filename={employer_logo}" alt="{employer}">
-                    <section id="info_section2">
-                            <h1>
-                            {name}
-                            </h1>
-                            <p><strong>{employer}</strong></p>
-                            <p>{localisation}</p>
-                            <p>{salary_min} - {salary_max} brutto</p>
-                    </section>
+            <img src="http://156.17.72.125:3001/get_logo?filename={employer_logo}" alt="{employer}">
+            <section id="info_section2">
+                <h1 style="font-weight: bold; color: white;">{job_title}</h1>
+                <p><strong>{employer}</strong></p>
+                <p>{location}</p>
+                <p>{salary_min} - {salary_max} brutto</p>
+            </section>
         </section>
         <section id="employment_info">
-            <BasicJobInfo up = "Wymiar pracy", down={wymiar_pracy}/>
+            <BasicJobInfo up = "Wymiar pracy", down={type_of_employment}/>
             <BasicJobInfo up = "Dowświadczenie", down="Niewymangane" />
             <BasicJobInfo up = "Typ umowy", down = {offer_type} />
             <BasicJobInfo up = "Tryb pracy", down = {type_of_employment} />
@@ -40,7 +38,7 @@
 img {
     width: 150px;
     height: 150px;
-    border-radius: 10px;
+    border-radius: 100px;
     margin: 0 10px 0 10px;
 }
 p {
@@ -56,7 +54,7 @@ header {
     width: 100%;
     background: linear-gradient(#2a2a2a,#2a2a2a) padding-box,linear-gradient(90deg,#ed6e61,#6359e1) border-box;
     border: 4px solid transparent;
-    box-shadow: -10px 10px 0px #242424;
+    box-shadow: -10px 10px 0px #2c2c2c;
 }
 
 #job_info {

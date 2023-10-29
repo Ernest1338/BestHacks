@@ -4,7 +4,7 @@
 </script>
 
 <main>
-	<h1 style="font-size: 32px;">Wyszukiwarka prac dla osób z niepełnosprawnościami</h1>
+	<h1 style="font-size: 32px;">Wyszukiwarka prac dla osób niepełnosprawnych</h1>
 	<Searchbar />
 </main>
 

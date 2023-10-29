@@ -5,6 +5,7 @@ export let description = "test"
 
 <section id="description">
     <h2 style="font-size: 32px; border-bottom: 2px dotted gray; padding-bottom: 30px; text-align: center;">Opis Oferty</h2>
+    <!-- TODO: FROM DB + merytorycznie lepiej napisac w bazie. w sensie musi to miec te info o tym ze miejsce pracy jest przyjazne dla osobo niepel. -->
     <h3>Obowiązki</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui distinctio veritatis dolorem hic, laborum blanditiis illo eaque consequatur eum minima, fugiat officiis cumque modi quam! Aspernatur deleniti error accusamus architecto.
         In, unde nihil cum saepe quia, eum quod adipisci odit quos asperiores nemo facilis eius repudiandae aliquid necessitatibus ut voluptate, dicta recusandae voluptas? Consequatur</p>
@@ -40,7 +41,7 @@ export let description = "test"
     display: flex;
     flex-direction: column;
     align-items: left;
-    box-shadow: -10px 10px 0px #242424;
+    box-shadow: -10px 10px 0px #2c2c2c;
 }
 h3 {
     font-size: 28px;
