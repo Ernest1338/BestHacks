@@ -1,6 +1,6 @@
 <script>
     import { goto } from '$app/navigation';
-	import { backend, cookies } from '$lib';
+	import { backend, cookies, loginutil } from '$lib';
 
     let email = "";
     let user = "";
@@ -16,10 +16,8 @@
             password: password,
             confirm_password: confirmPassword
         });
-        console.log(registerData);
         if(registerData.status == "OK") {
-            cookies.set("authkey", registerData.authkey);
-            cookies.set("loggedAs", user);
+            loginutil.login(registerData.isCompany, registerData.authkey);
             goto("/");
         } else if(registerData.status == "ERROR") {
             console.error(registerData.message);

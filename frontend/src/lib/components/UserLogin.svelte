@@ -9,20 +9,20 @@
     let errorMessage = "";
 
     async function login() {
-        let result = await backend.post("userlogin", "martin", {
+        let loginData = await backend.post("userlogin", "martin", {
             email: email,
             password: password
         });
-        result = JSON.parse(result);
-        if(result.status == "ERROR") {
+        loginData = JSON.parse(loginData);
+        if(loginData.status == "ERROR") {
             isError = true;
-            errorMessage = result.message;
+            errorMessage = loginData.message;
         }
-        if(result.status === "OK") {
-            loginutil.login(result.isCompany, result.authkey);
+        if(loginData.status === "OK") {
+            loginutil.login(loginData.isCompany, loginData.authkey);
             goto("/");
-        } else if(result.status === "ERROR") {
-            console.error(result.message);
+        } else if(loginData.status === "ERROR") {
+            console.error(loginData.message);
         }
     }
 </script>
