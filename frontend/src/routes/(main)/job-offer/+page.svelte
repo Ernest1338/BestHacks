@@ -9,7 +9,7 @@
         <JobOfferHeader />
         <JobOfferDescription />
     </div>
-    
+
 </main>
 
 <style lang="scss">

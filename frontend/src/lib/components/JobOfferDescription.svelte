@@ -4,6 +4,7 @@ export let description = "test"
 </script>
 
 <section id="description">
+    <h2 style="font-size: 32px; border-bottom: 2px dotted gray; padding-bottom: 30px; text-align: center;">Opis Oferty</h2>
     <h3>Obowiązki</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui distinctio veritatis dolorem hic, laborum blanditiis illo eaque consequatur eum minima, fugiat officiis cumque modi quam! Aspernatur deleniti error accusamus architecto.
         In, unde nihil cum saepe quia, eum quod adipisci odit quos asperiores nemo facilis eius repudiandae aliquid necessitatibus ut voluptate, dicta recusandae voluptas? Consequatur</p>
@@ -16,12 +17,11 @@ export let description = "test"
         delectus cupiditate neque ipsum voluptas quis consectetur, pariatur facilis?
         Nisi, rerum magnam? Eligendi explicabo odit beatae magnam officiis voluptatum cum dignissimos totam quos a assumenda ea, in voluptas quas? Provident autem, quae magnam aperiam eaque possimus repellat voluptatem inventore.
     </p>
-    <form method="post" action="http://test.php">
+    <form method="get" action="http://localhost/">
         <label for="file">Wgraj swoje CV</label>
         <input id="file" name="file" type="file" />
         <button>Upload</button>
     </form>
-    
 </section>
 
 <style lang="scss">
@@ -35,19 +35,24 @@ export let description = "test"
     width: 100%;
     min-height: 50vh;
     height: fit-content;
-    background: linear-gradient(#303133,#303133) padding-box,linear-gradient(90deg,#ed6e61,#6359e1) border-box;
+    background: linear-gradient(#2a2a2a,#2a2a2a) padding-box,linear-gradient(90deg,#ed6e61,#6359e1) border-box;
     border: 4px solid transparent;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    box-shadow: -10px 10px 0px #242424;
 }
 h3 {
     font-size: 28px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 p {
     font-size: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    // margin-left: 50px;
+    // margin-right: 50px;
 }
 form {
         color: black;
@@ -56,14 +61,14 @@ form {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 50px;
+        // margin: 50px;
         text-align: center;
     }
     input {
-        margin-top: 10px;
+        // margin-top: 10px;
     }
     button {
-        margin-top: 10px;
+        // margin-top: 10px;
         width: 100px;
         color: black;
     }
