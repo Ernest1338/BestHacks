@@ -68,7 +68,7 @@
         border: #232325 2px solid;
     }
     nav {
-        background: linear-gradient(180deg, rgba(34,34,34,1) 0%, rgba(51,51,51,1) 40%, rgba(51,51,51,1) 100%);
+        background-color: #272727;
         width: 100%;
         display: flex;
         justify-content: space-between;
