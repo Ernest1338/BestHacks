@@ -25,7 +25,7 @@
 </script>
 
 <form id="searchbar" >
-    <input type="text" name="search" id="search" bind:value={query} placeholder="Wyszukaj publikacje...">
+    <input type="text" name="search" id="search" bind:value={query} placeholder="Stanowisko, firma, słowa kluczowe, ...">
     <button type="submit" id="icon" on:click={sendQuery}>
         <Fa icon={faMagnifyingGlass} on:click={sendQuery} size="1.4x" color="#8f9a9c"/>
     </button>
@@ -33,14 +33,14 @@
 
 <style lang="scss">
     #searchbar {
-        width: 600px;
+        width: 700px;
         position: relative;
 
         input {
             width: 100%;
             border: none;
             background: linear-gradient(#303133,#303133) padding-box,linear-gradient(90deg,#ed6e61,#6359e1) border-box;
-            border: 4px solid transparent;
+            border: 5px solid transparent;
             border-radius: 30px;
             text-align: left;
             color: #f9f1ff;
@@ -71,5 +71,4 @@
     .search_navbar {
         position: absolute;
     }
-
 </style>

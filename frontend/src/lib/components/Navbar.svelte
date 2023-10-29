@@ -28,7 +28,7 @@
 <nav>
     <div class="logo-container" on:click={() => goto("/")}>
         <img src="{assets.getAssetUrl("logo.svg")}" alt="logo" srcset="" class="logo">
-        <span>Praca Dla Każdego</span>
+        <span style="color: #e2e2e2;">Praca Dla Każdego</span>
     </div>
 
     <div class="menu-button" on:click={switchMenu}>
@@ -68,7 +68,7 @@
         border: #232325 2px solid;
     }
     nav {
-        background: $secondary;
+        background: linear-gradient(180deg, rgba(34,34,34,1) 0%, rgba(51,51,51,1) 40%, rgba(51,51,51,1) 100%);
         width: 100%;
         display: flex;
         justify-content: space-between;
