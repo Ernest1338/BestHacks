@@ -18,8 +18,8 @@
 
 <header id="info">
 
-        <section id="job_info">     
-                <img src="{employer_logo}" alt="{employer}">        
+        <section id="job_info">
+                <img src="{employer_logo}" alt="{employer}">
 
                     <section id="info_section2">
                             <h1>
@@ -58,9 +58,9 @@ header {
     overflow: hidden;
     height: 250px;
     width: 100%;
-    background: linear-gradient(#303133,#303133) padding-box,linear-gradient(90deg,#ed6e61,#6359e1) border-box;
-    border : 4px solid transparent;
-    
+    background: linear-gradient(#2a2a2a,#2a2a2a) padding-box,linear-gradient(90deg,#ed6e61,#6359e1) border-box;
+    border: 4px solid transparent;
+    box-shadow: -10px 10px 0px #242424;
 }
 
 #job_info {
@@ -80,7 +80,7 @@ header {
 #info_section {
     background: transparent;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
 }
 #info_section2 {
     display: flex;

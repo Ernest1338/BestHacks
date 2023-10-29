@@ -38,10 +38,11 @@ app.get('/ping', (req, res) => {
     res.json({ status: "pong" });
 });
 
-// app.get('/joboffers', async (req, res) => {
-//     var rows = await db_query("SELECT * FROM joboffers");
-//     res.json(rows);
-// });
+app.get('/joboffer', async (req, res) => {
+    let id = req.query.id;
+    var rows = await db_query("SELECT * FROM joboffers WHERE id = " + id);
+    res.json(rows);
+});
 
 app.get('/get_logo', async (req, res) => {
     let filename = req.query.filename;
