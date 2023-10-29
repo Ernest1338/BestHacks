@@ -13,17 +13,16 @@
             email: email,
             password: password
         });
-        console.log(result);
         result = JSON.parse(result);
         if(result.status == "ERROR") {
             isError = true;
             errorMessage = result.message;
         }
-        if(loginData.status === "OK") {
-            loginutil.login(email, loginData.authkey);
+        if(result.status === "OK") {
+            loginutil.login(result.isCompany, result.authkey);
             goto("/");
-        } else if(loginData.status === "ERROR") {
-            console.error(loginData.message);
+        } else if(result.status === "ERROR") {
+            console.error(result.message);
         }
     }
 </script>
