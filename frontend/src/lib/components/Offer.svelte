@@ -110,7 +110,7 @@
                 color: #ff7206;
             }
         }
-            
+
         .job_location {
             margin-left: 10px;
             font-size: 16px;

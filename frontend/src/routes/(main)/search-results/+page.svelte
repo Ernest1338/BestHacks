@@ -59,7 +59,7 @@
                 "search search search"
                 "filter offer offer"
                 "filter offer offer";
-        grid-template-columns: 0.3fr 0.7fr;
+        grid-template-columns: 0.25fr 0.75fr;
         grid-auto-rows: max-content;
     }
 
@@ -100,5 +100,4 @@
             cursor: pointer;
         }
     }
-
 </style>
