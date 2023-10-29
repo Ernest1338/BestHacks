@@ -21,7 +21,6 @@ import { faGithub, faLinkedin, faSpaceAwesome } from '@fortawesome/free-brands-s
 
 <style lang="scss">
     footer {
-        background: #232425;
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -29,6 +28,8 @@ import { faGithub, faLinkedin, faSpaceAwesome } from '@fortawesome/free-brands-s
         padding: 10px;
         color: $text;
         font-weight: 600;
+        background: linear-gradient(#292929,#292929) padding-box,linear-gradient(90deg,#ed6e61,#6359e1) border-box;
+        border-top: 4px solid transparent;
     }
     a {
         text-decoration: none;

@@ -16,7 +16,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background: url("/src/lib/assets/background.png");
+		background: url("/src/lib/assets/background.jpg");
 		background-size: cover;
 		background-position: center;
 
@@ -24,7 +24,6 @@
 			font-size: 48px;
 			margin-top: 0;
 			color: white;
-			text-shadow: 1px 2px 0 black;
 		}
 	}
 </style>
