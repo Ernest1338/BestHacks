@@ -24,7 +24,6 @@
     top: 0;
     height: 100vh;
     width: 300px;
-    border-radius: 10px 0 0 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.649);
     display: flex;
     flex-direction: column;
@@ -32,6 +31,8 @@
     align-items: center;
     text-align: center;
     z-index: 1;
+    background: linear-gradient(#303133,#303133) padding-box,linear-gradient(0deg,#ed6e61,#6359e1) border-box;
+    border-left: 4px solid transparent;
 
     .menu-element {
         color: white;
