@@ -5,19 +5,15 @@
 
     export let data;
 
-    async function getJobOfferData() {
-        const promise = backend.get("joboffer", "dawid", { id: data.id });
-        promise.then(res => console.log(res));
-        return promise;
+    function getJobOfferData() {
+        return backend.get("joboffer", "dawid", { id: data.id });
     }
-
-    getJobOfferData();
 
 </script>
 
 <main>
     <div>
-        {#await getJobOfferData}
+        {#await getJobOfferData()}
             <p>Oczekuję na dane...</p>
         {:then jobOfferData}
             <JobOfferHeader {...jobOfferData} />
@@ -26,7 +22,7 @@
             <p>Error: {error}</p>
         {/await}
     </div>
-    
+
 </main>
 
 <style lang="scss">

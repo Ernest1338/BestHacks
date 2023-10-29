@@ -1,26 +1,22 @@
 <script>
 	import BasicJobInfo from "./BasicJobInfo.svelte";
 
-    export let name="";
-    export let employer="";
-    export let employer_logo = "";
-    export let description = "";
-    export let salary_min = "";
-    export let salary_max = "";
-    export let offer_type = "";
-    export let type_of_employment = "";
-    export let localisation="";
-    export let wymiar_pracy = "";
-    
-
+    export let name;
+    export let employer;
+    export let employer_logo;
+    export let description;
+    export let salary_min;
+    export let salary_max;
+    export let offer_type;
+    export let type_of_employment;
+    export let localisation;
+    export let wymiar_pracy;
 </script>
 
 
 <header id="info">
-
         <section id="job_info">
-                <img src="{employer_logo}" alt="{employer}">
-
+                <img src="http://156.17.72.125:3001/get_logo?filename={employer_logo}" alt="{employer}">
                     <section id="info_section2">
                             <h1>
                             {name}
