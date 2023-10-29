@@ -1,6 +1,6 @@
 <script>
     import { goto } from '$app/navigation';
-	import { backend, cookies } from '$lib';
+	import { backend, cookies, loginutil } from '$lib';
 
     let email = "";
     let password = "";
@@ -19,13 +19,12 @@
             isError = true;
             errorMessage = result.message;
         }
-        // if(loginData.status === "OK") {
-        //     cookies.set("authkey", loginData.authkey);
-        //     cookies.set("loggedAs", email);
-        //     goto("/");
-        // } else if(loginData.status === "ERROR") {
-        //     console.error(loginData.message);
-        // }
+        if(loginData.status === "OK") {
+            loginutil.login(email, loginData.authkey);
+            goto("/");
+        } else if(loginData.status === "ERROR") {
+            console.error(loginData.message);
+        }
     }
 </script>
 

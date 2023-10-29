@@ -4,7 +4,6 @@
 
     let email = "";
     let user = "";
-    let username = "";
     let password = "";
     let surname = "";
     let confirmPassword = "";
@@ -12,13 +11,15 @@
     async function register() {
         const registerData = await backend.post("userregister", {
             email: email,
-            username: username,
+            user: user,
+            surname: surname,
             password: password,
             confirm_password: confirmPassword
         });
+        console.log(registerData);
         if(registerData.status == "OK") {
             cookies.set("authkey", registerData.authkey);
-            cookies.set("loggedAs", username);
+            cookies.set("loggedAs", user);
             goto("/");
         } else if(registerData.status == "ERROR") {
             console.error(registerData.message);
