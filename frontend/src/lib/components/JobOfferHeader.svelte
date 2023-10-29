@@ -18,26 +18,16 @@
 
 <header id="info">
 
-
-        <section id="job_info">            
+        <section id="job_info">     
                 <img src="{employer_logo}" alt="{employer}">        
-                <section id="info_section">
-                    <h1>
-                        {name}
-                    </h1>
+
                     <section id="info_section2">
-                        <h4>
-                            {employer}
-                        </h4>
-                        <h4>
-                            {localisation}
-                        </h4>
-                    </section>
-                    <section>
-                        <h2>
-                            {salary_min} - {salary_max} brutto
-                        </h2>
-                    </section>
+                            <h1>
+                            {name}
+                            </h1>
+                            <p><strong>{employer}</strong></p>
+                            <p>{localisation}</p>
+                            <p>{salary_min} - {salary_max} brutto</p>
                 </section>
         </section>
         <section id="employment_info">
@@ -45,39 +35,49 @@
             <BasicJobInfo up = "Dowświadczenie", down="Niewymangane" />
             <BasicJobInfo up = "Typ umowy", down = {offer_type} />
             <BasicJobInfo up = "Tryb pracy", down = {type_of_employment} />
-            
+        </section>
+        <section id="test">
+
         </section>
 </header>
 
 
 <style lang="scss">
-    *{
 
-    }
 img {
     width: 150px;
     height: 150px;
-    border-radius: 100%;
+    border-radius: 10px;
+    margin: 0 10px 0 10px;
+}
+p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#test {
+    background-color: aqua;
 }
 header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     border-radius: 20px;
     overflow: hidden;
+    height: 250px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     background-color: #111;
 }
 #job_info {
     background: #999;
     display: flex;
-    width: 100%;
+    align-items: center;
+    height: 100%;
 }
 #employment_info {
+    height: 100%;
     width: 100%;
+    border-left: 2px solid black;
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: antiquewhite;
 }
 #info_section {
@@ -86,8 +86,6 @@ header {
 }
 #info_section2 {
     width: 100%;
-    display: flex;
-    justify-content: space-around;
 }
 
 </style>
