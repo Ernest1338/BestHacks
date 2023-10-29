@@ -16,11 +16,11 @@ export let description = "test"
         delectus cupiditate neque ipsum voluptas quis consectetur, pariatur facilis?
         Nisi, rerum magnam? Eligendi explicabo odit beatae magnam officiis voluptatum cum dignissimos totam quos a assumenda ea, in voluptas quas? Provident autem, quae magnam aperiam eaque possimus repellat voluptatem inventore.
     </p>
-    <form method="post" action="https://wp.pl">
+    <form method="post" action="http://test.php">
         <label for="file">Wgraj swoje CV</label>
         <input id="file" name="file" type="file" />
         <button>Upload</button>
-      </form>
+    </form>
     
 </section>
 
@@ -28,15 +28,7 @@ export let description = "test"
     *{
         color: $text;
     }
-    form {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    button {
-        width: 50%;
-    }
+
 #description {
     border-radius: 20px;
     margin: 30px 0 30px 0;
@@ -57,6 +49,23 @@ p {
     margin-left: 50px;
     margin-right: 50px;
 }
-
+form {
+        color: black;
+        background: transparent;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+        text-align: center;
+    }
+    input {
+        margin-top: 10px;
+    }
+    button {
+        margin-top: 10px;
+        width: 100px;
+        color: black;
+    }
 
 </style>

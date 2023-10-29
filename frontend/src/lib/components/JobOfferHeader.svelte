@@ -28,7 +28,7 @@
                             <p><strong>{employer}</strong></p>
                             <p>{localisation}</p>
                             <p>{salary_min} - {salary_max} brutto</p>
-                </section>
+                    </section>
         </section>
         <section id="employment_info">
             <BasicJobInfo up = "Wymiar pracy", down={wymiar_pracy}/>
@@ -48,8 +48,7 @@ img {
     margin: 0 10px 0 10px;
 }
 p {
-    margin-left: 10px;
-    margin-right: 10px;
+
 }
 
 header {
@@ -60,7 +59,10 @@ header {
     height: 250px;
     width: 100%;
     background: linear-gradient(#303133,#303133) padding-box,linear-gradient(90deg,#ed6e61,#6359e1) border-box;
-    border: 4px solid transparent;}
+    border : 4px solid transparent;
+    
+}
+
 #job_info {
     display: flex;
     align-items: center;
@@ -81,6 +83,10 @@ header {
     flex-direction: column;   
 }
 #info_section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
     width: 100%;
 }
 

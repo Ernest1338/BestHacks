@@ -1,7 +1,6 @@
 <script>
 	import JobOfferDescription from "$lib/components/JobOfferDescription.svelte";
-import JobOfferHeader from "$lib/components/JobOfferHeader.svelte";
-
+    import JobOfferHeader from "$lib/components/JobOfferHeader.svelte";
 
 </script>
 
