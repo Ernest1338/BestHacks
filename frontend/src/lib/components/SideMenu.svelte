@@ -6,9 +6,9 @@
 
 
 <nav class="menu" in:fly={{ x: 300, delay: 0, duration: 300 }} out:fly={{ x: 300, duration: 300 }}>
-    <a class="menu-element" href="/user-profile">Profil</a>
+    <a class="menu-element" href="/user-profile" style="border-bottom: 1px solid gray;">Profil</a>
     <a class="menu-element" href="/login">Zaloguj się</a>
-    <a class="menu-element" href="/register">Zarejestruj się</a>
+    <a class="menu-element" href="/register" style="border-bottom: 1px solid gray;">Zarejestruj się</a>
     <a class="menu-element" href="/companylogin">Zaloguj się jako firma</a>
     <a class="menu-element" href="/companyregister">Zarejestruj się jako firma</a>
 </nav>

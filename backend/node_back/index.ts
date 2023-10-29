@@ -5,9 +5,9 @@ const mysql = require('mysql2');
 const fs = require('fs');
 
 var db = mysql.createConnection({
-    host: "156.17.72.12",
+    host: "156.17.72.125",
     user: "root",
-    password: "",
+    password: "haslo",
     database: "besthacks"
 });
 
@@ -71,24 +71,30 @@ app.get('/search', async (req, res) => {
 
     if (query !== undefined) {
         sql = sql + "(`description` LIKE '%" + query + "%' OR `employer` LIKE '%" + query + "%')";
+    } else {
+        sql = sql + " 1=1 ";
     }
 
     let disability = req.query.disability;
+    if (disability === "") {disability = undefined;}
     if (disability !== undefined) {
         sql = sql + "AND (`excluded_disabilities` NOT LIKE '%" + disability + "%')";
     }
 
     let location = req.query.location;
+    if (location === "") {location = undefined;}
     if (location !== undefined) {
         sql = sql + "AND (`location` LIKE '%" + location + "%')";
     }
 
     let job_title = req.query.job_title;
+    if (job_title === "") {job_title = undefined;}
     if (job_title !== undefined) {
         sql = sql + "AND (`job_title` LIKE '%" + job_title + "%')";
     }
 
     let category = req.query.category;
+    if (category === "") {category = undefined;}
     if (category !== undefined) {
         sql = sql + "AND (`job_title` LIKE '%" + category + "%')";
     }
