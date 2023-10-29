@@ -2,7 +2,7 @@
 	import { backend, searchResult } from "$lib";
 	import Offer from "$lib/components/Offer.svelte";
 	import Searchbar from "$lib/components/Searchbar.svelte";
-    
+
     let offers = searchResult;
     console.log(offers)
 </script>
@@ -37,7 +37,7 @@
         position: relative;
         flex-grow: 1;
         display: grid;
-        grid-template-areas: 
+        grid-template-areas:
                 "search search search"
                 "filter offer offer"
                 "filter offer offer";
