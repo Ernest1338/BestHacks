@@ -11,18 +11,12 @@
         <section id="left">
             <h1>Zarejestruj firmę</h1>
             <label for="name">Imię</label>
-<<<<<<< HEAD
             <input type="text" name="name" placeholder="Jan">
             
-=======
-            <input type="text" name="name">
-
->>>>>>> 5a12b6ef8918d3c3a2c72d9e6b1091ea082ef543
             <label for="surname">Nazwisko</label>
             <input type="text" form="surname" placeholder="Kowalski">
 
             <label for="mail">Email</label>
-<<<<<<< HEAD
             <input type="email" name="mail" placeholder="kowalski@poczta.pl">
             
             
@@ -35,26 +29,11 @@
         <label for="nazwa_firmy">Nazwa firmy</label>
         <input type="text" form="nazwa_firmy" placeholder="Janex SA"> 
         
-=======
-            <input type="email" name="mail">
-
-
-            <label for="password">Hasło</label>
-            <input type="password" form="password">
-
-            <label for="phone">Telefon</label>
-        <input type="tel" id="phone" name="phone">
-
-        <label for="nazwa_firmy">Nazwa firmy</label>
-        <input type="text" form="nazwa_firmy">
-
->>>>>>> 5a12b6ef8918d3c3a2c72d9e6b1091ea082ef543
     </section>
     <section id="right">
 
 
         <label for="REGON">REGON</label>
-<<<<<<< HEAD
         <input type="text" form="REGON" placeholder="123456789">
         
         <label for="nip">NIP</label>
@@ -72,25 +51,6 @@
         <label for="Kod_pocztowy">Kod pocztowy</label>
         <input type="text" form="Kod_pocztowy" pattern="[0-9]{5}" placeholder="41-501">
         
-=======
-        <input type="text" form="REGON">
-
-        <label for="nip">NIP</label>
-        <input type="text" form="nip">
-
-        <label for="country">Kraj</label>
-        <input type="text" form="country">
-
-        <label for="region">region</label>
-        <input type="text" form="region">
-
-        <label for="Miasto">Miasto</label>
-        <input type="text" form="Miasto">
-
-        <label for="Kod_pocztowy">Kod pocztowy</label>
-        <input type="text" form="Kod_pocztowy" pattern="[0-9]{5}">
-
->>>>>>> 5a12b6ef8918d3c3a2c72d9e6b1091ea082ef543
         <label for="adres">Adres</label>
         <input type="text" form="adres" placeholder="Uliczna 3/1">
     </section>
