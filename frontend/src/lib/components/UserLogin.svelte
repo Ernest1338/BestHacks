@@ -39,6 +39,7 @@
     <button type="submit" on:click={login}>Zaloguj</button>
 
     <p class="signup">Nie masz konta?<button type="button" on:click={() => goto("/register")}>Zarejestruj się</button></p>
+    <p class="signup">Nie pamiętasz hasła?<button type="button" on:click={() => goto("/register")}>Kliknij tutaj</button></p>
 </form>
 
 {#if isError}
@@ -104,6 +105,10 @@
             background: none;
             font-weight: bold;
             cursor: pointer;
+        }
+
+        &:nth-child(2) {
+            margin-top: 4px;
         }
     }
 
