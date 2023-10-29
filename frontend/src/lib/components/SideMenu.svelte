@@ -9,8 +9,7 @@
     <a class="menu-element" href="/user-profile" style="border-bottom: 1px solid gray;">Profil</a>
     <a class="menu-element" href="/login">Zaloguj się</a>
     <a class="menu-element" href="/register" style="border-bottom: 1px solid gray;">Zarejestruj się</a>
-    <a class="menu-element" href="/companylogin">Zaloguj się jako firma</a>
-    <a class="menu-element" href="/company-register">Zarejestruj się jako firma</a>
+    <a class="menu-element" href="/compregister">Zarejestruj się jako firma</a>
 </nav>
 
 <style lang="scss">

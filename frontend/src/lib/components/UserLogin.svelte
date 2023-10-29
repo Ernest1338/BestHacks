@@ -9,18 +9,17 @@
     let errorMessage = "";
 
     async function login() {
-        let result = await backend.post("userlogin", "martin", {
+        let loginData = await backend.post("userlogin", "martin", {
             email: email,
             password: password
         });
-        console.log(result);
-        result = JSON.parse(result);
-        if(result.status == "ERROR") {
+        loginData = JSON.parse(loginData);
+        if(loginData.status == "ERROR") {
             isError = true;
-            errorMessage = result.message;
+            errorMessage = loginData.message;
         }
         if(loginData.status === "OK") {
-            loginutil.login(email, loginData.authkey);
+            loginutil.login(loginData.isCompany, loginData.authkey);
             goto("/");
         } else if(loginData.status === "ERROR") {
             console.error(loginData.message);

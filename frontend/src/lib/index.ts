@@ -56,12 +56,12 @@ export const assets = {
 }
 
 export const loginutil = {
-    login: (username: string, authkey: string) => {
+    login: (isCompany: boolean, authkey: string) => {
         cookies.set("authkey", authkey);
-        cookies.set("loggedAs", username);
+        cookies.set("isCompany", isCompany);
     },
     logout: () => {
-        cookies.get("authkey");
-        cookies.get("loggedAs");
+        cookies.delete("authkey");
+        cookies.delete("isCompany");
     }
 }
