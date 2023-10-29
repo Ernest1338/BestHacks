@@ -31,7 +31,7 @@
 
 <form>
     <h1>Logowanie</h1>
-    <label for="email">Email / Tel</label>
+    <label for="email">Email / Telefon</label>
     <input type="text" name="email" id="email" placeholder="test.email@gmail.com" bind:value={email}>
     <label for="password">Hasło</label>
     <input type="password" name="password" id="password" placeholder="Hasło" bind:value={password}>
