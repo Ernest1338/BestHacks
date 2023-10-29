@@ -57,8 +57,8 @@
     #offers {
         display: flex;
         flex-direction: column;
-        row-gap: 40px;
-        padding: 0 20px;
+        row-gap: 25px;
+        padding: 30px 20px;
     }
 
     #filters {

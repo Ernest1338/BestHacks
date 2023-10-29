@@ -1,16 +1,16 @@
 <script>
 	import BasicJobInfo from "./BasicJobInfo.svelte";
 
-    export let name="pakowacz";
-    export let employer="pecetserwis";
-    export let employer_logo = "https://http.cat/401";
-    export let description = "działa";
-    export let salary_min = 3600;
-    export let salary_max = 3600;
-    export let offer_type = "UoP";
-    export let type_of_employment = "Zdalna";
-    export let localisation="Wałbrzysz";
-    export let wymiar_pracy = "Pełen etat"
+    export let name="";
+    export let employer="";
+    export let employer_logo = "";
+    export let description = "";
+    export let salary_min = "";
+    export let salary_max = "";
+    export let offer_type = "";
+    export let type_of_employment = "";
+    export let localisation="";
+    export let wymiar_pracy = "";
     
 
 </script>

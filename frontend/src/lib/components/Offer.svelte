@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { goto } from "$app/navigation";
+
 
     export let id: string;
     export let employer: string;
@@ -38,31 +40,39 @@
     </section>
 
 </article> -->
-
-<article>
-    <div class="left">
-        <img src="{src}" alt="{employer}" id="employer_logo">
-    </div>
-    <div class="right">
-        <div class="top">
-            <span class="job_title">{job_title}</span>
-            <span class="job_salary">{salary_min} - {salary_max} PLN</span>
+<a href="job-offer?id={id}">
+    <article>
+        <div class="left">
+            <img src="{src}" alt="{employer}" id="employer_logo">
         </div>
-        <div class="bottom">
-            <span class="job_type">Typ umowy: {type_of_employment}</span>
-            <span class="job_location">{location}</span>
+        <div class="right">
+            <div class="top">
+                <span class="job_title">{job_title}</span>
+                <span class="job_salary">{salary_min} - {salary_max} PLN</span>
+            </div>
+            <div class="bottom">
+                <span class="job_type">Typ umowy: {type_of_employment}</span>
+                <span class="job_location">{location}</span>
+            </div>
         </div>
-    </div>
-</article>
+    </article>
+</a>
 
 <style lang="scss">
     article {
         color: white;
         display: flex;
         box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 2px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
-        padding: 5px;
+        padding: 10px 5px;
         border-radius: 6px;
         background: #2a2a2a;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 1px 9px 15px -5px rgba(25, 25, 25, 0.2);
+        }
 
         .left {
             display: flex;
@@ -71,6 +81,7 @@
 
             img {
                 width: 90px;
+                height: 45px;
                 border-radius: 5px;
                 margin: 5px;
             }
